@@ -3,7 +3,7 @@
 										 ---HEADER---
 */
 
-$header-top-height: 140px; 
+$header-top-height: 80px; 
 $header-middle-height: 50px; 
 $header-bottom-height: 50px;
 $header-min-menu: 70px;
@@ -34,6 +34,7 @@ $header-min-menu: 70px;
 .header-hidden{
 	position: relative;
 	height: $header-top-height+$header-bottom-height;
+	display: none;
 	transition: height 0.3s ease-in-out 0.4s;
 	@media ( max-width: 991px ){
 		height: 70px;
@@ -51,9 +52,10 @@ $header-min-menu: 70px;
 
 .header-top{
 	width: 100%;
-	color: black;
-	background-color: white;
+	color: white;
+	background-color: transparent;
 	display: flex;
+	border-bottom: 1px solid rgba(white, 0.5);
 	justify-content: space-between;
 }
 .header-top-content{
@@ -135,9 +137,10 @@ $header-min-menu: 70px;
 	}
 }
 .header-logo{
+	text-align: center;
 	img{
 		width: auto;
-    height: 70px;
+    height: 34px;
 	}
 }
 [data-toggle-menbar]{
@@ -166,17 +169,13 @@ $header-min-menu: 70px;
 			box-shadow: 0px 5px 20px -10px rgba(black, 0.3);
 		}
 		.header-logo{
-			img{
-				height: 50px;
-			}
+			@extend .filter-color-1;
 		}
 		.header-top-content{
-			overflow: hidden;
-			
-			height: 0px;
 			.menu{
-				color: white;
+				color: black;
 			}
+			
 		}
 	}
 }
@@ -237,7 +236,6 @@ $header-min-menu: 70px;
 	  display: flex;
 	  align-items: center;
 		height: 100%;
-		font-weight: 700;
 		justify-content: flex-start;
 		@extend .letter-none;
 		& > li{
