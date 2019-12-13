@@ -678,12 +678,12 @@ div.btn-style{
 	}
 	&.reverse{
 		&:not([class*="bg-color"]){
-			background-image: none;
-			background-color: $color-gray-4;
-			font-weight: 400;
+			background-color: white;
+			color: black;
 		}
 		&:not(.changecolor-none):hover{
-			background-color: darken($color-3, 10%);
+			background-color: black;
+			color: white;
 		}
 	}
 }
@@ -975,7 +975,7 @@ h1, h2, h3, h4{
 	position: relative;	
 }
 h1{
-	font-size: em(36);
+	font-size: em(60);
 	margin-bottom: 15px;
 	font-family: $font-family-2;
 	font-weight: 800;
@@ -988,7 +988,7 @@ h1{
 	}
 }
 h2{
-	font-size: em(28);
+	font-size: em(50);
 	margin-bottom: 15px;
 	font-weight: 700;
 	font-family: $font-family-2;
