@@ -7441,7 +7441,7 @@ div.btn-style, div.btn-def, div.btn-icon {
   text-align: center;
   overflow: hidden;
   font-family: "KIA";
-  font-weight: 700;
+  font-weight: 400;
   -webkit-border-radius: 0;
   border-radius: 0; }
   .btn-style.text-wrap, .text-wrap.btn-def, .text-wrap.btn-icon, span.text-wrap.btn-opacity {
@@ -9346,6 +9346,39 @@ figcaption {
     -ms-flex-pack: center;
     justify-content: center;
     margin-left: 20px; }
+
+.familycar-carousels {
+  text-align: center; }
+  @media (min-width: 992px) {
+    .familycar-carousels {
+      margin-top: 80px; } }
+  .familycar-carousels .owl-stage-outer {
+    overflow: visible; }
+  .familycar-carousels .img-content img {
+    width: auto;
+    margin-left: auto;
+    margin-right: auto; }
+  .familycar-carousels .desc-content {
+    margin-top: 30px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    text-align: center;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center; }
+    .familycar-carousels .desc-content h3 {
+      font-weight: 900; }
+
+.price {
+  font-size: 1.28571em;
+  font-weight: 900; }
 
 /* 
 		_footer.scss

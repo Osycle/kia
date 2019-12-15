@@ -49,7 +49,7 @@
 
 
 
-		$(".short-cer-items.owl-carousel").owlCarousel({
+		$(".familycar-carousel.owl-carousel").owlCarousel({
 			nav: true,
 			//items: 3,
 			dots: false,
@@ -58,7 +58,7 @@
 			touchDrag: checkSm(),
 			responsive:{
 				0:{items:1},
-				991:{items:4}
+				991:{items:1}
 			},
 			navText : owlBtn,
 			margin: 30
@@ -77,14 +77,7 @@
 			navText : owlBtn,
 			margin: 30
 		});
-			// var owlItem = spoCarousel.find(".owl-item");
-			// owlItem.map(function(i, el){
-			// 	el = $(el);
-			// 	if( i % 2 ){
-			// 		el.addClass("down");
-			// 		console.log(el);
-			// 	}
-			// })
+
 
 
 		$(".projects-items.owl-carousel").owlCarousel({

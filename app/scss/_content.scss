@@ -670,3 +670,39 @@ figcaption{
 		margin-left: 20px;
 	}
 }
+
+
+
+
+//short-familycar
+.familycar-carousels{
+	text-align: center;
+	@media (min-width: 992px){
+		margin-top: 80px;
+	}
+	.owl-stage-outer{
+		overflow: visible;
+	}
+	.img-content{
+		img{
+			width: auto;
+			margin-left: auto;
+			margin-right: auto;
+			//height: ;
+		}
+	}
+	.desc-content{
+		margin-top: 30px;
+		display: flex;
+		text-align: center;
+		justify-content: space-between;
+		align-items: center;
+		h3{
+			font-weight: 900;
+		}
+	}
+}
+.price{
+	font-size: em(18);
+	font-weight: 900;
+}
