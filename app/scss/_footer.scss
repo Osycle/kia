@@ -7,7 +7,6 @@
 */
 
 
-
 #footer{
 	position: relative;
 	//min-height: 150px;
@@ -17,6 +16,7 @@
 	background-repeat: no-repeat;
 	background-size: cover;
 	z-index: 1;
+	background-color: $color-3;
 	@media (max-width: 991px){
 		overflow: hidden;
 		background-color: $color-1;
@@ -34,70 +34,95 @@
 		background-position: center;
 	}
 }
-.rhombus{
-	position: relative;
-	img{
-		z-index: 10;
-		width: 15vw;
-		position: absolute;
-		right: -100px;
-    transform: translate(0,-35%);
-	}
-}
 .footer-content{
-	padding: 60px;
+	padding: 40px 0;
 	display: flex;
-	min-height: 600px;
 	align-items: center;
 	@media (max-width: 991px) {
 		padding: 0px;
 		display: block;
 	}
-}
-
-.footer-info{
-	.flex-adaptive{
-		align-items: center;
-		margin-top: 20px;
-		margin-bottom: 20px;
-	}
-	.icon-content{
-		@media (min-width: 992px) {
-			margin-right: 20px;
-		}
-		i{
-			width: 70px;
-			height: 70px;
-			font-size: 1.8em;
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			border-radius: 50%;
-			border: 2px solid $color-1;
-		}
-	}
-	.desc-content{
-		small{
-			color: $color-1;
-		}
+	li{
+		margin-top: 7px;
+		margin-bottom: 7px;
 	}
 }
 
-.form-content{
-	background-color: white;
-	color: black;
-	padding: 3em;
-	@media (max-width: 991px) {
-		padding: 1.5em;
+.footer-menu{
+	margin-top: 20px;
+	.list{
+		opacity: 0.6;
+	}
+	display: flex;
+	justify-content: space-between;
+	.item{
+		margin-left: 15px;
+		margin-right: 15px;
+	}
+	@media (max-width: 991px){
+		display: none;
+	}
+}
+.footer-serach{
+	text-align: right;
+	input{
+		background-color: transparent;
+		border: none;
+		border-bottom: 1px solid rgba(white, 0.3);
+		padding-top: 8px;
+		padding-bottom: 8px;
+		color: white;
+	}
+	.input-content{
+		position: relative;
+		input{
+			min-width: 200px;
+		}
+		&:before{
+			font: normal normal normal 14px/1 FontAwesome;
+			content: "\f002";
+			right: 0;
+			top: 50%;
+			transform: translateY(-50%);
+			font-size: 16px;
+			position: absolute;
+			pointer-events: none;
+		}
 	}
 }
 
+.footer-socicons{
+	font-size: 1.6em;
+	li{
+		&:not(:first-child){
+			margin-left: 16px;
+		}
+	}
+}
+
+.footer-lang{
+	text-align: center;
+	li{
+		position: relative;
+		padding-left: 15px;
+		padding-right: 15px;
+		&:not(:last-child):before{
+			@extend .clafclear;
+			height: 100%;
+			width: 1px;
+			right: -1px;
+			background-color: rgba(white, 0.5);
+			@media (max-width: 991px){
+				display: none;
+			}
+		}
+	}
+}
 
 .copy-content{
 	font-size: 0.85em;
 	padding: 8px 0;
 	color: white;
-	background-color: $color-3;
 	background-position: center 0px;
 	background-repeat: no-repeat;
 	background-size: auto;
@@ -112,6 +137,7 @@
 		}
 	}
 }
+
 .copyright{
 	
 }

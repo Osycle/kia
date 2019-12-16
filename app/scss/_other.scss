@@ -552,10 +552,6 @@ div.owl-nav{
 		*{
 			pointer-events: auto;
 		}
-		.owl-prev, .owl-next{
-			border: 6px solid white;
-			border-radius: 50%;
-		}
 		@media (min-width: 992px) {
 			.owl-prev{
 				margin-left: -30px;

@@ -683,6 +683,10 @@ figcaption{
 	.owl-stage-outer{
 		overflow: visible;
 	}
+	.owl-stage{
+		//transform: scale(1) !important;
+		transition-duration: 0.8s !important;
+	}
 	.img-content{
 		img{
 			width: auto;
@@ -695,14 +699,128 @@ figcaption{
 		margin-top: 30px;
 		display: flex;
 		text-align: center;
+		transition: all 0.8s ease;
 		justify-content: space-between;
 		align-items: center;
 		h3{
 			font-weight: 900;
 		}
 	}
+	.owl-item{
+		//position: absolute;
+		//left: 0;
+		//width: 550px !important;
+		figure{
+			perspective-origin: 50% 100%;
+			perspective: 1100px;
+		}
+		.desc-content{
+			opacity: 0;
+			transform-origin: 50% 100%;
+			transform: rotateX(90deg);
+		}
+		&.active{
+			.desc-content{
+				opacity: 1;
+				transform: scale(1);
+				transition-delay: 0.6s;
+			}
+		}
+	}
+}
+.familycar-list{
+	display: flex;
+	justify-content: center;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	@media (min-width: 992px) {
+		margin-bottom: 75px;
+	}
+	li{
+		font-weight: 800;
+		font-size: em(18);
+		opacity: 0.6;
+		margin-left: 15px;
+		margin-right: 15px;
+		border-top: 4px solid transparent;
+		padding-top: 4px;
+		&.active{
+			opacity: 1;
+			border-color: $color-1;
+		}
+	}
 }
 .price{
 	font-size: em(18);
 	font-weight: 900;
+}
+
+
+
+
+//all
+.all-nav{
+	li{
+		color: $color-gray-4;
+		font-size: em(18);
+
+		&:not(:last-child){
+			margin-right: 20px;
+		}
+		&.active{
+			font-weight: 600;
+			color: black;
+		}
+	}
+}
+.all-items{
+	h3{
+		font-weight: 900;
+	}
+	a{
+		display: block;
+		margin-top: 10px;
+		*{
+			vertical-align: middle;
+		}
+		i{
+			margin-left: 10px;
+		}
+	}
+}
+.hybridtype{
+	color: #00884d;
+	font-weight: 800;
+	margin-top: 15px;
+	margin-bottom: 15px;
+	*{
+		vertical-align: middle;
+	}
+	img{
+		margin-right: 10px;
+
+	}
+}
+
+
+
+
+//car-color
+.car-color-header{
+	display: flex;
+	align-items: center;
+	height: 80px;
+}
+.car-color-content{
+	min-height: 600px;
+	background-image: url('../img/other/bg-car-color-1.jpg');
+	background-size: cover;
+	background-position: center;
+	.main-img{
+		display: flex;
+		height: 600px;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+	}
 }

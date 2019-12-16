@@ -54,7 +54,7 @@
 			//items: 3,
 			dots: false,
 			dotsEach: true,
-			autoplay: true,
+			autoplay: false,
 			touchDrag: checkSm(),
 			responsive:{
 				0:{items:1},

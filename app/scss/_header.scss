@@ -40,6 +40,9 @@ $header-min-menu: 70px;
 		height: 70px;
 		display: block;
 	}
+	&.block{
+		display: block;
+	}
 }
 .header-offset{
 	height: $header-top-height;
