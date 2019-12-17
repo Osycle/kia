@@ -807,20 +807,139 @@ figcaption{
 
 //car-color
 .car-color-header{
-	display: flex;
-	align-items: center;
-	height: 80px;
+	.wrapper{
+		display: flex;
+		align-items: center;
+		height: 80px;
+	}
+	.price-content{
+		text-align: center;
+		ul{
+			display: flex;
+			justify-content: space-between;
+		}
+	}
+	.btn-content{
+		height: 100%;
+		text-align: right;
+		a{
+			display: flex;
+			align-items: center;
+		}
+		.btn-def, a{
+			height: 100%;
+		}
+	}
 }
 .car-color-content{
 	min-height: 600px;
 	background-image: url('../img/other/bg-car-color-1.jpg');
 	background-size: cover;
 	background-position: center;
+	position: relative;
 	.main-img{
 		display: flex;
 		height: 600px;
 		align-items: center;
 		justify-content: center;
 		text-align: center;
+		position: relative;
+		&:before{
+			@extend .clafclear;
+			background: radial-gradient(circle farthest-side at 50% 50%, transparent, rgba(black, 0.5));
+		}
+		input{
+			z-index: 1;
+			position: relative;
+			display: none;
+			&:checked{
+				& ~ .img-wrapper{
+					opacity: 1;
+					z-index: 2;
+					transition: all 0.6s steps(50);
+				}
+			}
+		}
+		.def-color{
+			filter: grayscale(1);
+			z-index: 0;
+			margin-top: 10em;
+		}
+		.img-wrapper{
+			opacity: 0;
+			transition: all 0.6s steps(50);
+			margin-top: 5em;
+			@extend .trans-center;
+		}
+		img{
+			z-index: 1;
+		}
 	}
+	.link-content{
+		margin-top: 60px;
+		color: white;
+		font-weight: 400;
+		position: absolute;
+		top: 0;
+		z-index: 1;
+		li{
+			margin-right: 15px;
+			opacity: 0.4;
+			&.active{
+				opacity: 1;
+				a{
+					border-color: $color-1;
+				}
+			}
+		}
+		a{
+			padding-top: 10px;
+			padding-bottom: 10px;
+			border-top: 4px solid transparent;
+		}
+	}
+	.car-color-footer{
+		color: white;
+		.container{
+			position: relative;
+		}
+		.wrapper-footer{
+			padding-top: 30px;
+			width: 100%;
+			padding-bottom: 30px;
+			position: absolute;
+			bottom: 0;
+		}
+	}
+	.btn-last{
+		@media (min-width: 992px){
+			margin-top: 30px;
+			text-align: right;
+		}
+	}
+	.color-select{
+		.list{
+			display: flex;
+			flex-wrap: wrap;
+			padding-top: 10px;
+			padding-bottom: 10px;
+			li{
+				margin: 5px;
+			}
+			.color{
+				display: flex;
+				width: 34px;
+				height: 34px;
+				border-radius: 50%;
+				&:hover{
+					cursor: pointer;
+				}
+			}
+		}
+	}
+}
+.car-color-add{
+	background-color: #f2f2f2;
+	padding-top: 60px;
+	padding-bottom: 60px;
 }

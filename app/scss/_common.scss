@@ -695,8 +695,8 @@ div.btn-style{
 span.btn-opacity{
 	@extend .btn-style;
 	background-color: transparent;
-	border: 1px solid $color-1;
-	color: $color-1;
+	border: 1px solid white;
+	color: white;
 	transition: all 0.3s ease-in-out;
 
 	a{
@@ -705,7 +705,8 @@ span.btn-opacity{
 
 	&:hover{
 		color: white;
-		background-color: $color-1;
+		background-color: black;
+		border-color: black;
 	}
 	&.reverse{
 		border-color: white;
