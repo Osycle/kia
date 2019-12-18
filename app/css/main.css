@@ -7073,7 +7073,7 @@ table {
 .claf, [data-flicker]:before, .checkbox-style-1:before {
   content: " "; }
 
-.clafclear, .header-info .info-item:not(:last-child):before, .menu ul.menu-list > li:before, .hr-style-1:before, .h-style-2:before, .h1-style-2 h1:not(.no-style):before, .h1-style-2 .h1:not(.no-style):before, .h1-style-2.text-center h1:after, .h1-style-2.text-center .h1:after, .h2-style-1 h2:not(.no-style):before, .arrow-pic:before, .car-color-content .main-img:before, .footer-lang li:not(:last-child):before {
+.clafclear, .header-info .info-item:not(:last-child):before, .menu ul.menu-list > li:before, .hr-style-1:before, .h-style-2:before, .h1-style-2 h1:not(.no-style):before, .h1-style-2 .h1:not(.no-style):before, .h1-style-2.text-center h1:after, .h1-style-2.text-center .h1:after, .h2-style-1 h2:not(.no-style):before, .arrow-pic:before, .car-color-content .main-img:before, .pos-tabs .tabnav ul li:before, .footer-lang li:not(:last-child):before {
   content: " ";
   height: 100%;
   width: 100%;
@@ -9517,7 +9517,7 @@ figcaption {
     height: 100%; }
 
 .car-color-content {
-  min-height: 600px;
+  height: 600px;
   background-image: url("../img/other/bg-car-color-1.jpg");
   -webkit-background-size: cover;
   background-size: cover;
@@ -9622,10 +9622,45 @@ figcaption {
       .car-color-content .color-select .list .color:hover {
         cursor: pointer; }
 
-.car-color-add {
-  background-color: #f2f2f2;
-  padding-top: 60px;
-  padding-bottom: 60px; }
+.pos {
+  background-color: #f2f2f2; }
+  .pos .entry-header {
+    padding-top: 30px;
+    padding-bottom: 30px; }
+
+.pos-tabs {
+  border-top: 1px solid #c8c8c8; }
+  .pos-tabs .tabnav ul {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex; }
+    .pos-tabs .tabnav ul a {
+      min-height: 110px;
+      display: block;
+      padding: 15px;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+      -ms-flex-align: center;
+      align-items: center; }
+    .pos-tabs .tabnav ul li {
+      opacity: 0.5;
+      position: relative; }
+      .pos-tabs .tabnav ul li:before {
+        height: 4px;
+        background-color: transparent;
+        pointer-events: none; }
+      .pos-tabs .tabnav ul li.active {
+        opacity: 1; }
+        .pos-tabs .tabnav ul li.active:before {
+          background-color: #bb162b; }
+    .pos-tabs .tabnav ul big {
+      font-weight: 900;
+      font-size: 1.71429em; }
+  .pos-tabs .tabpanes {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    background-color: white; }
 
 /* 
 		_footer.scss

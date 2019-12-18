@@ -119,7 +119,7 @@ gulp.task('watch', ['browser-sync', 'scripts'], () =>
 	{
 		setTimeout(function() {
 			gulp.watch(app+'/scss/**/*.+(scss|sass)', ['sass']);
-		}, 800);
+		}, 1200);
 		gulp.watch(app+'/*.html', browserSync.reload);
 		gulp.watch(app+'/**/*.php', browserSync.reload);
 		gulp.watch(app+'/templates/**/*.tpl', browserSync.reload);

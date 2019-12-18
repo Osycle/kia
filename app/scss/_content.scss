@@ -832,7 +832,7 @@ figcaption{
 	}
 }
 .car-color-content{
-	min-height: 600px;
+	height: 600px;
 	background-image: url('../img/other/bg-car-color-1.jpg');
 	background-size: cover;
 	background-position: center;
@@ -938,8 +938,50 @@ figcaption{
 		}
 	}
 }
-.car-color-add{
+.pos{
 	background-color: #f2f2f2;
-	padding-top: 60px;
-	padding-bottom: 60px;
+	.entry-header{
+		padding-top: 30px;
+		padding-bottom: 30px;
+	}
+}
+.pos-tabs{
+	border-top: 1px solid $color-gray-3;
+	.tabnav{
+		ul{
+			display: flex;
+			a{
+				min-height: 110px;
+				display: block;
+				//display: flex;
+				padding: 15px;
+				align-items: center;
+			}
+			li{
+				opacity: 0.5;
+				position: relative;
+				&:before{
+					@extend .clafclear;
+					height: 4px;
+					background-color: transparent;
+					pointer-events: none;
+				}
+				&.active{
+					opacity: 1;
+					&:before{
+						background-color: $color-1;
+					}
+				}
+			}
+			big{
+				font-weight: 900;
+				font-size: em(24);
+			}
+		}
+	}
+	.tabpanes{
+		padding-top: 40px;
+		padding-bottom: 40px;
+		background-color: white;
+	}
 }

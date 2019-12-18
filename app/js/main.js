@@ -58,7 +58,7 @@
 			touchDrag: checkSm(),
 			responsive:{
 				0:{items:1},
-				991:{items:3}
+				991:{items:1}
 			},
 			navText : owlBtn,
 			margin: 30
