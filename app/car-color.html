@@ -114,8 +114,8 @@
 		<main data-aos="fade" data-aos-delay="0">
 
 
-			<div class="car-color">
-				<div class="car-color-header">
+			<div class="carbuild" carbuild-mode="pos">
+				<div class="carbuild-header">
 					<div class="container">
 						<div class="row wrapper">
 							<div class="col-md-4 p-h-15">
@@ -135,7 +135,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="car-color-content clearfix">
+				<div class="carbuild-content clearfix" style="background-image: url('../img/other/bg-car-color-1.jpg');">
 					<div class="container">
 						<div class="link-content">
 							<ul class="list-inline">
@@ -171,22 +171,22 @@
 							</div>
 						</figure>
 					</div>
-					<div class="car-color-footer">
+					<div class="carbuild-footer">
 						<div class="container">
 							<div class="wrapper-footer row">
 								<div class="col-md-3 p-h-15">
 									<p>Отделка L</p>
-									<span class="btn-opacity">
-										<a href="">Изменить отделку</a>
+									<span class="btn-opacity" carbuild-mode-change="pos">
+										<a href="javascript:;">Изменить отделку</a>
 									</span>
 								</div>
 								<div class="col-md-6 p-h-15 color-select">
-									<p>Отделка L</p>
+									<p>Цвет: <span carbuild-color-text>Aurora Black</span></p>
 									<ul class="list">
-										<li><label for="car-color-1" class="color" style="background-color: #0d40e8"></label></li>
-										<li><label for="car-color-2" class="color" style="background-color: #232323"></label></li>
-										<li><label for="car-color-3" class="color" style="background-color: #131e43"></label></li>
-										<li><label for="car-color-4" class="color" style="background-color: #94071a"></label></li>
+										<li><label for="car-color-1" carbuild-color="Синий" class="color" style="background-color: #0d40e8"></label></li>
+										<li><label for="car-color-2" carbuild-color="Aurora Black" class="color" style="background-color: #232323"></label></li>
+										<li><label for="car-color-3" carbuild-color="Сапфирный" class="color" style="background-color: #131e43"></label></li>
+										<li><label for="car-color-4" carbuild-color="Алый" class="color" style="background-color: #94071a"></label></li>
 									</ul>
 								</div>
 								<div class="col-md-3 p-h-15 btn-last">
@@ -197,11 +197,15 @@
 							</div>
 						</div>
 					</div>
-					<div class="pos">
+					<div class="carbuild-pos">
+						<span class="btn-close" carbuild-mode-change="def" role="button">
+							<span></span>
+							<span></span>
+						</span>
 						<div class="container entry-header">
 							<h4>Выберите дополнение или выберите отделку.</h4>
 						</div>
-						<div class="pos-tabs">
+						<div class="carbuild-pos-tabs">
 							<div class="container">
 								<div class="tabnav">
 									<ul class="">
@@ -220,10 +224,11 @@
 												<p>185 л.с. при 6000 об / мин</p>
 												<p>Автоматическая коробка передач</p>
 												<div>
+												<br>
 												<label role="button">
 													<input type="checkbox" name="" class="hide">
 													<span class="va-middle checkbox-style-1"></span>
-													<span class="m-l-10 va-middle">Запомнить меня</span>
+													<span class="m-l-10 va-middle">Полный привод +$1700</span>
 												</label>
 												</div>
 									  	</div>
@@ -235,14 +240,90 @@
 												<p>Опция Smart Driving Technologies</p>
 												<p>Опция подогрева передних сидений</p>
 									  	</div>
-									  	<div class="col-md-3">
+									  	<div class="col-md-6 addpacks">
 									  		<h4>Пакеты и варианты</h4>
+									  		<br>
+									  		<div class="item">
+									  			<div class="align-center">
+														<label role="button">
+															<input type="checkbox" name="" class="hide">
+															<span class="va-middle checkbox-style-1"></span>
+															<span class="m-l-10 va-middle">Удобный пакет</span>
+														</label>
+														<span class="addpacks-price">+$1700</span>
+														<a role="button" data-toggle="collapse" data-parent="#accordion" href=".addpacks #item-1" aria-expanded="false"><i class="fa fa-angle-down"></i></a>
+									  			</div>
+													<div id="item-1" class="collapse-body collapse">
+														<br>
+														<ul>
+															<li>lorem</li>
+															<li>lorem</li>
+															<li>lorem</li>
+															<li>lorem</li>
+														</ul>
+													</div>
+									  		</div>
+									  		<div class="item">
+									  			<div class="align-center">
+														<label role="button">
+															<input type="checkbox" name="" class="hide">
+															<span class="va-middle checkbox-style-1"></span>
+															<span class="m-l-10 va-middle">3rd Row Seating Package</span>
+														</label>
+														<span class="addpacks-price">+$1,490</span>
+														<a role="button" data-toggle="collapse" data-parent="#accordion" href=".addpacks #item-2" aria-expanded="false"><i class="fa fa-angle-down"></i></a>
+									  			</div>
+													<div id="item-2" class="collapse-body collapse">
+														<br>
+														<ul>
+															<li>lorem</li>
+															<li>lorem</li>
+															<li>lorem</li>
+															<li>lorem</li>
+														</ul>
+													</div>
+									  		</div>
+									  		<div class="item">
+									  			<div class="align-center">
+														<label role="button">
+															<input type="checkbox" name="" class="hide">
+															<span class="va-middle checkbox-style-1"></span>
+															<span class="m-l-10 va-middle">Ключ дистанционного запуска</span>
+														</label>
+														<span class="addpacks-price">+$425</span>
+														<a role="button" data-toggle="collapse" data-parent="#accordion" href=".addpacks #item-3" aria-expanded="true"><i class="fa fa-angle-down"></i></a>
+									  			</div>
+													<div id="item-3" class="collapse-body collapse">
+														<br>
+														<ul>
+															<li>lorem</li>
+															<li>lorem</li>
+															<li>lorem</li>
+															<li>lorem</li>
+														</ul>
+													</div>
+									  		</div>
+
 									  	</div>
 
 									  </div>
 									  <div class="tab-pane fade" id="tab-pos-2"><p>iusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</p></div>
 									</div>
 								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="carbuild-summary">
+					<div class="wrapper">
+						<div class="summary-header">
+							<span class="text">ваша конструкция</span>
+							<div class="icon-content">
+								<ul class="list-inline">
+									<li><a href=""><i class="fa fa-share-alt"></i></a></li>
+									<li><a href=""><i class="fa fa-envelope"></i></a></li>
+									<li><a href=""><i class="fa fa-print"></i></a></li>
+								</ul>
 							</div>
 						</div>
 					</div>

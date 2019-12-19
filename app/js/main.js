@@ -446,6 +446,19 @@
 
 
 
+
+
+
+		//car-color
+		$(document).on("click", "[carbuild-mode-change]", function(){
+			$("[carbuild-mode]").attr("carbuild-mode", $(this).attr("carbuild-mode-change"));
+		})
+		$(document).on("click", "[carbuild-color]", function(){
+			$("[carbuild-color-text]").text($(this).attr("carbuild-color"));
+		})
+
+
+
 	});
 })(jQuery);
 

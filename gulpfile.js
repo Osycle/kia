@@ -33,11 +33,13 @@ gulp.task('img', () =>
 // SASS
 gulp.task('sass', () =>
 	{
-	return gulp.src( app+'/scss/**/*.+(scss|sass)' )
-			.pipe( sass().on('error', sass.logError) )
-			.pipe( autoprefixer( {browsers: 'last 25 versions', cascade: false} ) )
-			.pipe( gulp.dest(app+'/css/') )
-			.pipe( browserSync.reload({stream:true}) );
+		setTimeout(function(){
+			return gulp.src( app+'/scss/**/*.+(scss|sass)' )
+					.pipe( sass().on('error', sass.logError) )
+					.pipe( autoprefixer( {browsers: 'last 25 versions', cascade: false} ) )
+					.pipe( gulp.dest(app+'/css/') )
+					.pipe( browserSync.reload({stream:true}) );
+		}, 1000);
 	}
 );
 
@@ -117,9 +119,7 @@ gulp.task('clear', () =>
 // WATCHING
 gulp.task('watch', ['browser-sync', 'scripts'], () =>
 	{
-		setTimeout(function() {
-			gulp.watch(app+'/scss/**/*.+(scss|sass)', ['sass']);
-		}, 1200);
+		gulp.watch(app+'/scss/**/*.+(scss|sass)', ['sass']);
 		gulp.watch(app+'/*.html', browserSync.reload);
 		gulp.watch(app+'/**/*.php', browserSync.reload);
 		gulp.watch(app+'/templates/**/*.tpl', browserSync.reload);

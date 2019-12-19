@@ -1208,14 +1208,14 @@ input[type="checkbox"]:checked{
 	}		
 }
 .checkbox-style-1{
-	width: 15px;
-	height: 15px;
+	width: 20px;
+	height: 20px;
 	min-width: 15px;
 	display: inline-block;
 	//transition: all 0.05s ease;
 	background-color: transparent;
 	position: relative;
-	border-radius: 3px;
+	border-radius: 0;
 	margin-left: 5px;
 	&:hover{
 		cursor: pointer;
@@ -1223,8 +1223,8 @@ input[type="checkbox"]:checked{
 	&:before{
 		@extend .claf;
 		@extend .trans-center;
-		border-radius: 3px;
-		border: 1px solid $color-3;
+		border-radius: 0;
+		border: 1px solid $color-gray-3;
 	}
 }
 //radio

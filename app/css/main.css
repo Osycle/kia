@@ -7073,7 +7073,7 @@ table {
 .claf, [data-flicker]:before, .checkbox-style-1:before {
   content: " "; }
 
-.clafclear, .header-info .info-item:not(:last-child):before, .menu ul.menu-list > li:before, .hr-style-1:before, .h-style-2:before, .h1-style-2 h1:not(.no-style):before, .h1-style-2 .h1:not(.no-style):before, .h1-style-2.text-center h1:after, .h1-style-2.text-center .h1:after, .h2-style-1 h2:not(.no-style):before, .arrow-pic:before, .car-color-content .main-img:before, .pos-tabs .tabnav ul li:before, .footer-lang li:not(:last-child):before {
+.clafclear, .header-info .info-item:not(:last-child):before, .menu ul.menu-list > li:before, .hr-style-1:before, .h-style-2:before, .h1-style-2 h1:not(.no-style):before, .h1-style-2 .h1:not(.no-style):before, .h1-style-2.text-center h1:after, .h1-style-2.text-center .h1:after, .h2-style-1 h2:not(.no-style):before, .arrow-pic:before, .carbuild-content .main-img:before, .carbuild-pos-tabs .tabnav ul li:before, .footer-lang li:not(:last-child):before {
   content: " ";
   height: 100%;
   width: 100%;
@@ -7939,21 +7939,21 @@ input[type="checkbox"]:checked ~ .checkbox-style-1, input[type="checkbox"]:check
   background-color: #1f1f1f; }
 
 .checkbox-style-1 {
-  width: 15px;
-  height: 15px;
+  width: 20px;
+  height: 20px;
   min-width: 15px;
   display: inline-block;
   background-color: transparent;
   position: relative;
-  -webkit-border-radius: 3px;
-  border-radius: 3px;
+  -webkit-border-radius: 0;
+  border-radius: 0;
   margin-left: 5px; }
   .checkbox-style-1:hover {
     cursor: pointer; }
   .checkbox-style-1:before {
-    -webkit-border-radius: 3px;
-    border-radius: 3px;
-    border: 1px solid #1f1f1f; }
+    -webkit-border-radius: 0;
+    border-radius: 0;
+    border: 1px solid #c8c8c8; }
 
 input[type="radio"]:checked ~ .radio-style-1, input[type="radio"]:checked ~ .radio-style-2, input[type="radio"]:checked ~ label .radio-style-1, input[type="radio"]:checked ~ label .radio-style-2 {
   background-color: #1f1f1f; }
@@ -9478,7 +9478,27 @@ figcaption {
   .hybridtype img {
     margin-right: 10px; }
 
-.car-color-header .wrapper {
+[carbuild-mode="pos"] .carbuild-content {
+  background-image: none !important; }
+  [carbuild-mode="pos"] .carbuild-content .main-img {
+    height: 360px; }
+    [carbuild-mode="pos"] .carbuild-content .main-img:before {
+      background: #e4e4e4; }
+    [carbuild-mode="pos"] .carbuild-content .main-img .img-wrapper, [carbuild-mode="pos"] .carbuild-content .main-img .def-color {
+      margin-top: 0;
+      -webkit-transition: none !important;
+      -o-transition: none !important;
+      transition: none !important; }
+  [carbuild-mode="pos"] .carbuild-content .link-content {
+    display: none; }
+
+[carbuild-mode="pos"] .carbuild-footer {
+  display: none; }
+
+[carbuild-mode="def"] .carbuild-pos {
+  display: none; }
+
+.carbuild-header .wrapper {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -9489,9 +9509,9 @@ figcaption {
   align-items: center;
   height: 80px; }
 
-.car-color-header .price-content {
+.carbuild-header .price-content {
   text-align: center; }
-  .car-color-header .price-content ul {
+  .carbuild-header .price-content ul {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -9501,10 +9521,10 @@ figcaption {
     -ms-flex-pack: justify;
     justify-content: space-between; }
 
-.car-color-header .btn-content {
+.carbuild-header .btn-content {
   height: 100%;
   text-align: right; }
-  .car-color-header .btn-content a {
+  .carbuild-header .btn-content a {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -9513,17 +9533,16 @@ figcaption {
     -webkit-align-items: center;
     -ms-flex-align: center;
     align-items: center; }
-  .car-color-header .btn-content .btn-def, .car-color-header .btn-content a {
+  .carbuild-header .btn-content .btn-def, .carbuild-header .btn-content a {
     height: 100%; }
 
-.car-color-content {
+.carbuild-content {
   height: 600px;
-  background-image: url("../img/other/bg-car-color-1.jpg");
   -webkit-background-size: cover;
   background-size: cover;
   background-position: center;
   position: relative; }
-  .car-color-content .main-img {
+  .carbuild-content .main-img {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -9539,66 +9558,69 @@ figcaption {
     justify-content: center;
     text-align: center;
     position: relative; }
-    .car-color-content .main-img:before {
+    .carbuild-content .main-img:before {
       background: -webkit-radial-gradient(circle farthest-side at 50% 50%, transparent, rgba(0, 0, 0, 0.5));
       background: -o-radial-gradient(circle farthest-side at 50% 50%, transparent, rgba(0, 0, 0, 0.5));
       background: radial-gradient(circle farthest-side at 50% 50%, transparent, rgba(0, 0, 0, 0.5)); }
-    .car-color-content .main-img input {
+    .carbuild-content .main-img input {
       z-index: 1;
       position: relative;
       display: none; }
-      .car-color-content .main-img input:checked ~ .img-wrapper {
+      .carbuild-content .main-img input:checked ~ .img-wrapper {
         opacity: 1;
         z-index: 2;
         -webkit-transition: all 0.6s steps(50);
         -o-transition: all 0.6s steps(50);
         transition: all 0.6s steps(50); }
-    .car-color-content .main-img .def-color {
+    .carbuild-content .main-img .def-color {
       -webkit-filter: grayscale(1);
       filter: grayscale(1);
       z-index: 0;
+      -webkit-transition: all 0.6s steps(50);
+      -o-transition: all 0.6s steps(50);
+      transition: all 0.6s steps(50);
       margin-top: 10em; }
-    .car-color-content .main-img .img-wrapper {
+    .carbuild-content .main-img .img-wrapper {
       opacity: 0;
       -webkit-transition: all 0.6s steps(50);
       -o-transition: all 0.6s steps(50);
       transition: all 0.6s steps(50);
       margin-top: 5em; }
-    .car-color-content .main-img img {
+    .carbuild-content .main-img img {
       z-index: 1; }
-  .car-color-content .link-content {
+  .carbuild-content .link-content {
     margin-top: 60px;
     color: white;
     font-weight: 400;
     position: absolute;
     top: 0;
     z-index: 1; }
-    .car-color-content .link-content li {
+    .carbuild-content .link-content li {
       margin-right: 15px;
       opacity: 0.4; }
-      .car-color-content .link-content li.active {
+      .carbuild-content .link-content li.active {
         opacity: 1; }
-        .car-color-content .link-content li.active a {
+        .carbuild-content .link-content li.active a {
           border-color: #bb162b; }
-    .car-color-content .link-content a {
+    .carbuild-content .link-content a {
       padding-top: 10px;
       padding-bottom: 10px;
       border-top: 4px solid transparent; }
-  .car-color-content .car-color-footer {
+  .carbuild-content .carbuild-footer {
     color: white; }
-    .car-color-content .car-color-footer .container, .car-color-content .car-color-footer .vi .vi-container, .vi .car-color-content .car-color-footer .vi-container, .car-color-content .car-color-footer .vi .vi-content, .vi .car-color-content .car-color-footer .vi-content, .car-color-content .car-color-footer .bnr-carousel .container-arrows, .bnr-carousel .car-color-content .car-color-footer .container-arrows, .car-color-content .car-color-footer .bnr-carousel .flickity-page-dots, .bnr-carousel .car-color-content .car-color-footer .flickity-page-dots, .car-color-content .car-color-footer .fancybox-caption {
+    .carbuild-content .carbuild-footer .container, .carbuild-content .carbuild-footer .vi .vi-container, .vi .carbuild-content .carbuild-footer .vi-container, .carbuild-content .carbuild-footer .vi .vi-content, .vi .carbuild-content .carbuild-footer .vi-content, .carbuild-content .carbuild-footer .bnr-carousel .container-arrows, .bnr-carousel .carbuild-content .carbuild-footer .container-arrows, .carbuild-content .carbuild-footer .bnr-carousel .flickity-page-dots, .bnr-carousel .carbuild-content .carbuild-footer .flickity-page-dots, .carbuild-content .carbuild-footer .fancybox-caption {
       position: relative; }
-    .car-color-content .car-color-footer .wrapper-footer {
+    .carbuild-content .carbuild-footer .wrapper-footer {
       padding-top: 30px;
       width: 100%;
       padding-bottom: 30px;
       position: absolute;
       bottom: 0; }
   @media (min-width: 992px) {
-    .car-color-content .btn-last {
+    .carbuild-content .btn-last {
       margin-top: 30px;
       text-align: right; } }
-  .car-color-content .color-select .list {
+  .carbuild-content .color-select .list {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -9608,9 +9630,9 @@ figcaption {
     flex-wrap: wrap;
     padding-top: 10px;
     padding-bottom: 10px; }
-    .car-color-content .color-select .list li {
+    .carbuild-content .color-select .list li {
       margin: 5px; }
-    .car-color-content .color-select .list .color {
+    .carbuild-content .color-select .list .color {
       display: -webkit-box;
       display: -webkit-flex;
       display: -ms-flexbox;
@@ -9619,23 +9641,52 @@ figcaption {
       height: 34px;
       -webkit-border-radius: 50%;
       border-radius: 50%; }
-      .car-color-content .color-select .list .color:hover {
+      .carbuild-content .color-select .list .color:hover {
         cursor: pointer; }
 
-.pos {
-  background-color: #f2f2f2; }
-  .pos .entry-header {
+.carbuild-pos {
+  background-color: #f2f2f2;
+  position: relative; }
+  .carbuild-pos.active {
+    display: block; }
+  .carbuild-pos .entry-header {
     padding-top: 30px;
     padding-bottom: 30px; }
+  .carbuild-pos .btn-close {
+    position: absolute;
+    z-index: 1;
+    right: 60px;
+    top: 40px;
+    width: 35px;
+    height: 35px; }
+    .carbuild-pos .btn-close span {
+      width: 35px;
+      height: 3px;
+      top: 17px;
+      left: 0;
+      display: inline-block;
+      -webkit-transform-origin: 50%;
+      -ms-transform-origin: 50%;
+      transform-origin: 50%;
+      position: absolute;
+      background-color: #666666; }
+      .carbuild-pos .btn-close span:nth-child(1) {
+        -webkit-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+        transform: rotate(-45deg); }
+      .carbuild-pos .btn-close span:nth-child(2) {
+        -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        transform: rotate(45deg); }
 
-.pos-tabs {
+.carbuild-pos-tabs {
   border-top: 1px solid #c8c8c8; }
-  .pos-tabs .tabnav ul {
+  .carbuild-pos-tabs .tabnav ul {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex; }
-    .pos-tabs .tabnav ul a {
+    .carbuild-pos-tabs .tabnav ul a {
       min-height: 110px;
       display: block;
       padding: 15px;
@@ -9643,24 +9694,77 @@ figcaption {
       -webkit-align-items: center;
       -ms-flex-align: center;
       align-items: center; }
-    .pos-tabs .tabnav ul li {
+    .carbuild-pos-tabs .tabnav ul li {
       opacity: 0.5;
       position: relative; }
-      .pos-tabs .tabnav ul li:before {
+      .carbuild-pos-tabs .tabnav ul li:before {
         height: 4px;
         background-color: transparent;
         pointer-events: none; }
-      .pos-tabs .tabnav ul li.active {
+      .carbuild-pos-tabs .tabnav ul li.active {
         opacity: 1; }
-        .pos-tabs .tabnav ul li.active:before {
+        .carbuild-pos-tabs .tabnav ul li.active:before {
           background-color: #bb162b; }
-    .pos-tabs .tabnav ul big {
+    .carbuild-pos-tabs .tabnav ul big {
       font-weight: 900;
       font-size: 1.71429em; }
-  .pos-tabs .tabpanes {
+  .carbuild-pos-tabs .tabpanes {
     padding-top: 40px;
     padding-bottom: 40px;
     background-color: white; }
+
+.addpacks .item {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-top: 1px solid #c8c8c8; }
+  .addpacks .item:last-child {
+    border-bottom: 1px solid #c8c8c8; }
+
+.addpacks label {
+  display: inline-block; }
+
+.addpacks a i {
+  font-size: 1.5em;
+  margin-left: 20px; }
+
+.addpacks-price {
+  font-weight: 500; }
+
+.carbuild-summary {
+  position: absolute;
+  right: 0;
+  width: 450px;
+  background-color: white;
+  top: 0;
+  height: 500px; }
+  .carbuild-summary .wrapper {
+    border: 1px solid #c8c8c8; }
+  .carbuild-summary .summary-header {
+    color: black;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    min-height: 80px;
+    padding: 20px;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    border-bottom: 1px solid #c8c8c8; }
+    .carbuild-summary .summary-header .text {
+      text-transform: uppercase;
+      font-size: 0.85714em;
+      font-weight: 400;
+      letter-spacing: 1px; }
+    .carbuild-summary .summary-header .icon-content i {
+      font-size: 1.42857em; }
+    .carbuild-summary .summary-header .icon-content li {
+      vertical-align: middle; }
 
 /* 
 		_footer.scss
@@ -12367,13 +12471,13 @@ html .p-0 {
 .relative {
   position: relative; }
 
-.trans-v-center, .btn-def.icon-right.box-xs-10 i, .btn-icon.icon-right.box-xs-10 i, .short-somecar .img-content, .trans-center, .checkbox-style-1:before, .form-def .fancybox-close-small:after, .car-color-content .main-img .img-wrapper {
+.trans-v-center, .btn-def.icon-right.box-xs-10 i, .btn-icon.icon-right.box-xs-10 i, .short-somecar .img-content, .trans-center, .checkbox-style-1:before, .form-def .fancybox-close-small:after, .carbuild-content .main-img .img-wrapper {
   top: 50%; }
 
-.trans-h-center, .trans-center, .checkbox-style-1:before, .form-def .fancybox-close-small:after, .car-color-content .main-img .img-wrapper {
+.trans-h-center, .trans-center, .checkbox-style-1:before, .form-def .fancybox-close-small:after, .carbuild-content .main-img .img-wrapper {
   left: 50%; }
 
-.trans-v-center, .btn-def.icon-right.box-xs-10 i, .btn-icon.icon-right.box-xs-10 i, .short-somecar .img-content, .trans-h-center, .trans-center, .checkbox-style-1:before, .form-def .fancybox-close-small:after, .car-color-content .main-img .img-wrapper {
+.trans-v-center, .btn-def.icon-right.box-xs-10 i, .btn-icon.icon-right.box-xs-10 i, .short-somecar .img-content, .trans-h-center, .trans-center, .checkbox-style-1:before, .form-def .fancybox-close-small:after, .carbuild-content .main-img .img-wrapper {
   position: absolute; }
 
 .trans-v-center, .btn-def.icon-right.box-xs-10 i, .btn-icon.icon-right.box-xs-10 i, .short-somecar .img-content {
@@ -12386,7 +12490,7 @@ html .p-0 {
   -ms-transform: translateX(-50%);
   transform: translateX(-50%); }
 
-.trans-center, .checkbox-style-1:before, .form-def .fancybox-close-small:after, .car-color-content .main-img .img-wrapper {
+.trans-center, .checkbox-style-1:before, .form-def .fancybox-close-small:after, .carbuild-content .main-img .img-wrapper {
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%); }

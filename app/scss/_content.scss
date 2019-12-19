@@ -805,8 +805,35 @@ figcaption{
 
 
 
-//car-color
-.car-color-header{
+//carbuild
+[carbuild-mode="pos"]{
+	.carbuild-content{
+		background-image: none !important;
+		.main-img{
+			height: 360px;
+
+			&:before{
+				background: #e4e4e4;
+			}
+			.img-wrapper, .def-color{
+				margin-top: 0;
+				transition: none !important;
+			}
+		}
+		.link-content{
+			display: none;
+		}
+	}
+	.carbuild-footer{
+		display: none;
+	}
+}
+[carbuild-mode="def"]{
+	.carbuild-pos{
+		display: none;
+	}
+}
+.carbuild-header{
 	.wrapper{
 		display: flex;
 		align-items: center;
@@ -831,9 +858,8 @@ figcaption{
 		}
 	}
 }
-.car-color-content{
+.carbuild-content{
 	height: 600px;
-	background-image: url('../img/other/bg-car-color-1.jpg');
 	background-size: cover;
 	background-position: center;
 	position: relative;
@@ -863,6 +889,7 @@ figcaption{
 		.def-color{
 			filter: grayscale(1);
 			z-index: 0;
+			transition: all 0.6s steps(50);
 			margin-top: 10em;
 		}
 		.img-wrapper{
@@ -898,7 +925,7 @@ figcaption{
 			border-top: 4px solid transparent;
 		}
 	}
-	.car-color-footer{
+	.carbuild-footer{
 		color: white;
 		.container{
 			position: relative;
@@ -938,14 +965,44 @@ figcaption{
 		}
 	}
 }
-.pos{
+.carbuild-pos{
 	background-color: #f2f2f2;
+	position: relative;
+	//display: none;
+	&.active{
+		display: block;
+	}
 	.entry-header{
 		padding-top: 30px;
 		padding-bottom: 30px;
 	}
+	.btn-close{
+		position: absolute;
+		z-index: 1;
+		right: 60px;
+		top: 40px;
+		width: 35px;
+		height: 35px;
+		span{
+			width: 35px;
+			height: 3px;
+			top: 17px;
+			left: 0;
+			display: inline-block;
+			transform-origin: 50%;
+			position: absolute;
+			background-color: $color-gray-4;
+			&:nth-child(1){
+				transform: rotate(-45deg);
+			}
+			&:nth-child(2){
+				transform: rotate(45deg);
+			}
+
+		}
+	}
 }
-.pos-tabs{
+.carbuild-pos-tabs{
 	border-top: 1px solid $color-gray-3;
 	.tabnav{
 		ul{
@@ -983,5 +1040,71 @@ figcaption{
 		padding-top: 40px;
 		padding-bottom: 40px;
 		background-color: white;
+	}
+}
+
+.addpacks{
+	.item{
+		padding-top: 20px;
+		padding-bottom: 20px;
+		border-top: 1px solid $color-gray-3;
+		
+		
+		&:last-child{
+			border-bottom: 1px solid $color-gray-3;
+		}
+	}
+	label{
+		display: inline-block;
+	}
+	a{
+		i{
+			font-size: 1.5em;
+			margin-left: 20px;
+		}
+	}
+	.collapse-body{
+		p{
+
+		}
+	}
+}
+.addpacks-price{
+	font-weight: 500;
+}
+
+.carbuild-summary{
+	position: absolute;
+	right: 0;
+	width: 450px;	
+	background-color: white;
+	top: 0;
+	height: 500px;
+	//padding: 20px;
+	.wrapper{
+		border: 1px solid $color-gray-3;
+	}
+	.summary-header{
+		color: black;
+		display: flex;
+		justify-content: space-between;
+		min-height: 80px;
+		padding: 20px;
+		align-items: center;
+		.text{
+			text-transform: uppercase;
+			font-size: em(12);
+			font-weight: 400;
+			letter-spacing: 1px;
+		}
+		.icon-content{
+			i{
+				font-size: em(20);
+			}
+			li{
+				vertical-align: middle;
+			}
+		}
+		border-bottom: 1px solid $color-gray-3;
 	}
 }
