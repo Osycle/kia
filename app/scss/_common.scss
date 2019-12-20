@@ -692,7 +692,7 @@ div.btn-style{
 
 
 
-span.btn-opacity{
+.btn-opacity{
 	@extend .btn-style;
 	background-color: transparent;
 	border: 1px solid white;
@@ -709,11 +709,10 @@ span.btn-opacity{
 		border-color: black;
 	}
 	&.reverse{
-		border-color: white;
-		color: white;
+		border-color: black;
+		color: black;
 		&:hover{
-			border-color: $color-1;
-			color: $color-1;
+			color: white;
 		}
 	}
 }

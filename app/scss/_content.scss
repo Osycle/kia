@@ -1073,23 +1073,41 @@ figcaption{
 	font-weight: 500;
 }
 
+
+
+
+
+
+
 .carbuild-summary{
-	position: absolute;
+	position: fixed;
 	right: 0;
 	width: 450px;	
 	background-color: white;
 	top: 0;
-	height: 500px;
+	z-index: 150;
 	//padding: 20px;
+	&:before{
+		@extend .clafclear;
+		background-color: rgba(black, 0.8);
+		width: 3000px;
+		height: 3000px;
+		transform: translateX(-50%);
+		z-index: -1;
+	}
 	.wrapper{
-		border: 1px solid $color-gray-3;
+		//z-index: 1;
+		//position: relative;
+		background-color: white;
+		@extend .shadow-def;
+		//border: 1px solid $color-gray-3;
 	}
 	.summary-header{
 		color: black;
 		display: flex;
 		justify-content: space-between;
 		min-height: 80px;
-		padding: 20px;
+		padding: 20px 25px;
 		align-items: center;
 		.text{
 			text-transform: uppercase;
@@ -1106,5 +1124,29 @@ figcaption{
 			}
 		}
 		border-bottom: 1px solid $color-gray-3;
+	}
+	.summary-body{
+		padding: 20px 25px;
+		height: calc(100vh - 80px);
+		overflow-y: auto;
+	}
+	.summary-img{
+		text-align: center;
+		margin-top: 15px;
+		margin-bottom: 15px;
+	}
+	.entry-header{
+		text-align: center;
+		margin-top: 15px;
+		margin-bottom: 15px;
+	}
+	.price-content{
+		display: flex;
+		align-items: center;
+		.color-gray-4{
+			//padding-left: 7px;
+			//padding-right: 7px;
+			font-size: em(15);
+		}
 	}
 }

@@ -6984,7 +6984,7 @@ table {
 .font-family-3 {
   font-family: "sans-serif"; }
 
-.btn-res, .btn-style button, .btn-def button, .btn-icon button, span.btn-opacity button {
+.btn-res, .btn-style button, .btn-def button, .btn-icon button, .btn-opacity button {
   background-color: transparent;
   border: 0;
   padding: 0; }
@@ -7038,7 +7038,7 @@ table {
   background-repeat: no-repeat;
   background-position: center; }
 
-.shadow-def, .select2-dropdown {
+.shadow-def, .carbuild-summary .wrapper, .select2-dropdown {
   -webkit-box-shadow: 0 0 22px -3px rgba(0, 0, 0, 0.2);
   box-shadow: 0 0 22px -3px rgba(0, 0, 0, 0.2); }
 
@@ -7073,7 +7073,7 @@ table {
 .claf, [data-flicker]:before, .checkbox-style-1:before {
   content: " "; }
 
-.clafclear, .header-info .info-item:not(:last-child):before, .menu ul.menu-list > li:before, .hr-style-1:before, .h-style-2:before, .h1-style-2 h1:not(.no-style):before, .h1-style-2 .h1:not(.no-style):before, .h1-style-2.text-center h1:after, .h1-style-2.text-center .h1:after, .h2-style-1 h2:not(.no-style):before, .arrow-pic:before, .carbuild-content .main-img:before, .carbuild-pos-tabs .tabnav ul li:before, .footer-lang li:not(:last-child):before {
+.clafclear, .header-info .info-item:not(:last-child):before, .menu ul.menu-list > li:before, .hr-style-1:before, .h-style-2:before, .h1-style-2 h1:not(.no-style):before, .h1-style-2 .h1:not(.no-style):before, .h1-style-2.text-center h1:after, .h1-style-2.text-center .h1:after, .h2-style-1 h2:not(.no-style):before, .arrow-pic:before, .carbuild-content .main-img:before, .carbuild-pos-tabs .tabnav ul li:before, .carbuild-summary:before, .footer-lang li:not(:last-child):before {
   content: " ";
   height: 100%;
   width: 100%;
@@ -7438,10 +7438,10 @@ table {
     -webkit-border-radius: 0px;
     border-radius: 0px; }
 
-div.btn-style, div.btn-def, div.btn-icon {
+div.btn-style, div.btn-def, div.btn-icon, div.btn-opacity {
   display: block; }
 
-.btn-style, .btn-def, .btn-icon, span.btn-opacity {
+.btn-style, .btn-def, .btn-icon, .btn-opacity {
   display: inline-block;
   white-space: nowrap;
   text-align: center;
@@ -7450,27 +7450,27 @@ div.btn-style, div.btn-def, div.btn-icon {
   font-weight: 400;
   -webkit-border-radius: 0;
   border-radius: 0; }
-  .btn-style.text-wrap, .text-wrap.btn-def, .text-wrap.btn-icon, span.text-wrap.btn-opacity {
+  .btn-style.text-wrap, .text-wrap.btn-def, .text-wrap.btn-icon, .text-wrap.btn-opacity {
     white-space: wrap; }
-  .btn-style button, .btn-def button, .btn-icon button, span.btn-opacity button {
+  .btn-style button, .btn-def button, .btn-icon button, .btn-opacity button {
     width: 100%;
     font-weight: inherit; }
-  .btn-style a, .btn-def a, .btn-icon a, span.btn-opacity a, .btn-style button, .btn-def button, .btn-icon button, span.btn-opacity button, .btn-style .btn-this, .btn-def .btn-this, .btn-icon .btn-this, span.btn-opacity .btn-this {
+  .btn-style a, .btn-def a, .btn-icon a, .btn-opacity a, .btn-style button, .btn-def button, .btn-icon button, .btn-opacity button, .btn-style .btn-this, .btn-def .btn-this, .btn-icon .btn-this, .btn-opacity .btn-this {
     line-height: normal;
     position: relative; }
-    .btn-style a:not([class*="p-h"]), .btn-def a:not([class*="p-h"]), .btn-icon a:not([class*="p-h"]), span.btn-opacity a:not([class*="p-h"]), .btn-style button:not([class*="p-h"]), .btn-def button:not([class*="p-h"]), .btn-icon button:not([class*="p-h"]), span.btn-opacity button:not([class*="p-h"]), .btn-style .btn-this:not([class*="p-h"]), .btn-def .btn-this:not([class*="p-h"]), .btn-icon .btn-this:not([class*="p-h"]), span.btn-opacity .btn-this:not([class*="p-h"]) {
+    .btn-style a:not([class*="p-h"]), .btn-def a:not([class*="p-h"]), .btn-icon a:not([class*="p-h"]), .btn-opacity a:not([class*="p-h"]), .btn-style button:not([class*="p-h"]), .btn-def button:not([class*="p-h"]), .btn-icon button:not([class*="p-h"]), .btn-opacity button:not([class*="p-h"]), .btn-style .btn-this:not([class*="p-h"]), .btn-def .btn-this:not([class*="p-h"]), .btn-icon .btn-this:not([class*="p-h"]), .btn-opacity .btn-this:not([class*="p-h"]) {
       padding-left: 2em;
       padding-right: 2em; }
-    .btn-style a:not([class*="p-v"]), .btn-def a:not([class*="p-v"]), .btn-icon a:not([class*="p-v"]), span.btn-opacity a:not([class*="p-v"]), .btn-style button:not([class*="p-v"]), .btn-def button:not([class*="p-v"]), .btn-icon button:not([class*="p-v"]), span.btn-opacity button:not([class*="p-v"]), .btn-style .btn-this:not([class*="p-v"]), .btn-def .btn-this:not([class*="p-v"]), .btn-icon .btn-this:not([class*="p-v"]), span.btn-opacity .btn-this:not([class*="p-v"]) {
+    .btn-style a:not([class*="p-v"]), .btn-def a:not([class*="p-v"]), .btn-icon a:not([class*="p-v"]), .btn-opacity a:not([class*="p-v"]), .btn-style button:not([class*="p-v"]), .btn-def button:not([class*="p-v"]), .btn-icon button:not([class*="p-v"]), .btn-opacity button:not([class*="p-v"]), .btn-style .btn-this:not([class*="p-v"]), .btn-def .btn-this:not([class*="p-v"]), .btn-icon .btn-this:not([class*="p-v"]), .btn-opacity .btn-this:not([class*="p-v"]) {
       padding-top: 1.5em;
       padding-bottom: 1.5em; }
-    .btn-style a:not([class*="flex"]), .btn-def a:not([class*="flex"]), .btn-icon a:not([class*="flex"]), span.btn-opacity a:not([class*="flex"]), .btn-style button:not([class*="flex"]), .btn-def button:not([class*="flex"]), .btn-icon button:not([class*="flex"]), span.btn-opacity button:not([class*="flex"]), .btn-style .btn-this:not([class*="flex"]), .btn-def .btn-this:not([class*="flex"]), .btn-icon .btn-this:not([class*="flex"]), span.btn-opacity .btn-this:not([class*="flex"]) {
+    .btn-style a:not([class*="flex"]), .btn-def a:not([class*="flex"]), .btn-icon a:not([class*="flex"]), .btn-opacity a:not([class*="flex"]), .btn-style button:not([class*="flex"]), .btn-def button:not([class*="flex"]), .btn-icon button:not([class*="flex"]), .btn-opacity button:not([class*="flex"]), .btn-style .btn-this:not([class*="flex"]), .btn-def .btn-this:not([class*="flex"]), .btn-icon .btn-this:not([class*="flex"]), .btn-opacity .btn-this:not([class*="flex"]) {
       display: block; }
     @media (max-width: 991px) {
-      .btn-style a, .btn-def a, .btn-icon a, span.btn-opacity a, .btn-style button, .btn-def button, .btn-icon button, span.btn-opacity button, .btn-style .btn-this, .btn-def .btn-this, .btn-icon .btn-this, span.btn-opacity .btn-this {
+      .btn-style a, .btn-def a, .btn-icon a, .btn-opacity a, .btn-style button, .btn-def button, .btn-icon button, .btn-opacity button, .btn-style .btn-this, .btn-def .btn-this, .btn-icon .btn-this, .btn-opacity .btn-this {
         font-weight: 500;
         font-size: 1em; } }
-  .btn-style i, .btn-def i, .btn-icon i, span.btn-opacity i {
+  .btn-style i, .btn-def i, .btn-icon i, .btn-opacity i {
     vertical-align: middle; }
 
 .btn-def, .btn-icon {
@@ -7516,27 +7516,26 @@ div.btn-style, div.btn-def, div.btn-icon {
     background-color: black;
     color: white; }
 
-span.btn-opacity {
+.btn-opacity {
   background-color: transparent;
   border: 1px solid white;
   color: white;
   -webkit-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out; }
-  span.btn-opacity a {
+  .btn-opacity a {
     -webkit-transition: none !important;
     -o-transition: none !important;
     transition: none !important; }
-  span.btn-opacity:hover {
+  .btn-opacity:hover {
     color: white;
     background-color: black;
     border-color: black; }
-  span.btn-opacity.reverse {
-    border-color: white;
-    color: white; }
-    span.btn-opacity.reverse:hover {
-      border-color: #bb162b;
-      color: #bb162b; }
+  .btn-opacity.reverse {
+    border-color: black;
+    color: black; }
+    .btn-opacity.reverse:hover {
+      color: white; }
 
 [data-flicker]:before {
   opacity: 0.1;
@@ -9731,14 +9730,22 @@ figcaption {
   font-weight: 500; }
 
 .carbuild-summary {
-  position: absolute;
+  position: fixed;
   right: 0;
   width: 450px;
   background-color: white;
   top: 0;
-  height: 500px; }
+  z-index: 150; }
+  .carbuild-summary:before {
+    background-color: rgba(0, 0, 0, 0.8);
+    width: 3000px;
+    height: 3000px;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+    z-index: -1; }
   .carbuild-summary .wrapper {
-    border: 1px solid #c8c8c8; }
+    background-color: white; }
   .carbuild-summary .summary-header {
     color: black;
     display: -webkit-box;
@@ -9750,7 +9757,7 @@ figcaption {
     -ms-flex-pack: justify;
     justify-content: space-between;
     min-height: 80px;
-    padding: 20px;
+    padding: 20px 25px;
     -webkit-box-align: center;
     -webkit-align-items: center;
     -ms-flex-align: center;
@@ -9765,6 +9772,30 @@ figcaption {
       font-size: 1.42857em; }
     .carbuild-summary .summary-header .icon-content li {
       vertical-align: middle; }
+  .carbuild-summary .summary-body {
+    padding: 20px 25px;
+    height: -webkit-calc(100vh - 80px);
+    height: calc(100vh - 80px);
+    overflow-y: auto; }
+  .carbuild-summary .summary-img {
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 15px; }
+  .carbuild-summary .entry-header {
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 15px; }
+  .carbuild-summary .price-content {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center; }
+    .carbuild-summary .price-content .color-gray-4 {
+      font-size: 1.07143em; }
 
 /* 
 		_footer.scss
