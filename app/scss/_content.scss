@@ -976,30 +976,31 @@ figcaption{
 		padding-top: 30px;
 		padding-bottom: 30px;
 	}
-	.btn-close{
-		position: absolute;
-		z-index: 1;
-		right: 60px;
-		top: 40px;
-		width: 35px;
-		height: 35px;
-		span{
-			width: 35px;
-			height: 3px;
-			top: 17px;
-			left: 0;
-			display: inline-block;
-			transform-origin: 50%;
-			position: absolute;
-			background-color: $color-gray-4;
-			&:nth-child(1){
-				transform: rotate(-45deg);
-			}
-			&:nth-child(2){
-				transform: rotate(45deg);
-			}
 
+}
+.btn-close{
+	position: absolute;
+	z-index: 1;
+	right: 60px;
+	top: 40px;
+	width: 35px;
+	height: 35px;
+	.stick{
+		width: 35px;
+		height: 3px;
+		top: 17px;
+		left: 0;
+		display: inline-block;
+		transform-origin: 50%;
+		position: absolute;
+		background-color: $color-gray-4;
+		&:nth-child(1){
+			transform: rotate(-45deg);
 		}
+		&:nth-child(2){
+			transform: rotate(45deg);
+		}
+
 	}
 }
 .carbuild-pos-tabs{
@@ -1095,19 +1096,36 @@ figcaption{
 		transform: translateX(-50%);
 		z-index: -1;
 	}
+	.btn-close{
+		right: auto;
+		left: -15px;
+		top: 20px;
+		background-color: white;
+		@extend .shadow-def;
+		.stick{
+			margin-left: 7px;
+			height: 2px;
+			width: 20px;
+			border-radius: 2px;
+			background-color: $color-gray-4;
+		}
+	}
 	.wrapper{
 		//z-index: 1;
 		//position: relative;
-		background-color: white;
+		background-color: #f2f2f2;
+		padding: 20px;
 		@extend .shadow-def;
 		//border: 1px solid $color-gray-3;
+		padding: 20px 25px;
+		height: calc(100vh - 0px);
+		overflow-y: auto;
 	}
 	.summary-header{
 		color: black;
 		display: flex;
 		justify-content: space-between;
-		min-height: 80px;
-		padding: 20px 25px;
+		padding: 10px 20px 20px 20px;
 		align-items: center;
 		.text{
 			text-transform: uppercase;
@@ -1126,9 +1144,8 @@ figcaption{
 		border-bottom: 1px solid $color-gray-3;
 	}
 	.summary-body{
-		padding: 20px 25px;
-		height: calc(100vh - 80px);
-		overflow-y: auto;
+		background-color: white;
+		padding: 20px;
 	}
 	.summary-img{
 		text-align: center;
@@ -1137,6 +1154,7 @@ figcaption{
 	}
 	.entry-header{
 		text-align: center;
+		font-size: em(18);
 		margin-top: 15px;
 		margin-bottom: 15px;
 	}

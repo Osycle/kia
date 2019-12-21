@@ -7038,7 +7038,7 @@ table {
   background-repeat: no-repeat;
   background-position: center; }
 
-.shadow-def, .carbuild-summary .wrapper, .select2-dropdown {
+.shadow-def, .carbuild-summary .btn-close, .carbuild-summary .wrapper, .select2-dropdown {
   -webkit-box-shadow: 0 0 22px -3px rgba(0, 0, 0, 0.2);
   box-shadow: 0 0 22px -3px rgba(0, 0, 0, 0.2); }
 
@@ -9651,32 +9651,33 @@ figcaption {
   .carbuild-pos .entry-header {
     padding-top: 30px;
     padding-bottom: 30px; }
-  .carbuild-pos .btn-close {
-    position: absolute;
-    z-index: 1;
-    right: 60px;
-    top: 40px;
+
+.btn-close {
+  position: absolute;
+  z-index: 1;
+  right: 60px;
+  top: 40px;
+  width: 35px;
+  height: 35px; }
+  .btn-close .stick {
     width: 35px;
-    height: 35px; }
-    .carbuild-pos .btn-close span {
-      width: 35px;
-      height: 3px;
-      top: 17px;
-      left: 0;
-      display: inline-block;
-      -webkit-transform-origin: 50%;
-      -ms-transform-origin: 50%;
-      transform-origin: 50%;
-      position: absolute;
-      background-color: #666666; }
-      .carbuild-pos .btn-close span:nth-child(1) {
-        -webkit-transform: rotate(-45deg);
-        -ms-transform: rotate(-45deg);
-        transform: rotate(-45deg); }
-      .carbuild-pos .btn-close span:nth-child(2) {
-        -webkit-transform: rotate(45deg);
-        -ms-transform: rotate(45deg);
-        transform: rotate(45deg); }
+    height: 3px;
+    top: 17px;
+    left: 0;
+    display: inline-block;
+    -webkit-transform-origin: 50%;
+    -ms-transform-origin: 50%;
+    transform-origin: 50%;
+    position: absolute;
+    background-color: #666666; }
+    .btn-close .stick:nth-child(1) {
+      -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+      transform: rotate(-45deg); }
+    .btn-close .stick:nth-child(2) {
+      -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+      transform: rotate(45deg); }
 
 .carbuild-pos-tabs {
   border-top: 1px solid #c8c8c8; }
@@ -9744,8 +9745,25 @@ figcaption {
     -ms-transform: translateX(-50%);
     transform: translateX(-50%);
     z-index: -1; }
-  .carbuild-summary .wrapper {
+  .carbuild-summary .btn-close {
+    right: auto;
+    left: -15px;
+    top: 20px;
     background-color: white; }
+    .carbuild-summary .btn-close .stick {
+      margin-left: 7px;
+      height: 2px;
+      width: 20px;
+      -webkit-border-radius: 2px;
+      border-radius: 2px;
+      background-color: #666666; }
+  .carbuild-summary .wrapper {
+    background-color: #f2f2f2;
+    padding: 20px;
+    padding: 20px 25px;
+    height: -webkit-calc(100vh - 0px);
+    height: calc(100vh - 0px);
+    overflow-y: auto; }
   .carbuild-summary .summary-header {
     color: black;
     display: -webkit-box;
@@ -9756,8 +9774,7 @@ figcaption {
     -webkit-justify-content: space-between;
     -ms-flex-pack: justify;
     justify-content: space-between;
-    min-height: 80px;
-    padding: 20px 25px;
+    padding: 10px 20px 20px 20px;
     -webkit-box-align: center;
     -webkit-align-items: center;
     -ms-flex-align: center;
@@ -9773,16 +9790,15 @@ figcaption {
     .carbuild-summary .summary-header .icon-content li {
       vertical-align: middle; }
   .carbuild-summary .summary-body {
-    padding: 20px 25px;
-    height: -webkit-calc(100vh - 80px);
-    height: calc(100vh - 80px);
-    overflow-y: auto; }
+    background-color: white;
+    padding: 20px; }
   .carbuild-summary .summary-img {
     text-align: center;
     margin-top: 15px;
     margin-bottom: 15px; }
   .carbuild-summary .entry-header {
     text-align: center;
+    font-size: 1.28571em;
     margin-top: 15px;
     margin-bottom: 15px; }
   .carbuild-summary .price-content {
