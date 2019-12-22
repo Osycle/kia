@@ -456,6 +456,16 @@
 		$(document).on("click", "[carbuild-color]", function(){
 			$("[carbuild-color-text]").text($(this).attr("carbuild-color"));
 		})
+		$(document).on("click", "[addclass]", function(){
+			var arrattr = $(this).attr("addclass").trim().split(":");
+			$(arrattr[0]).addClass(arrattr[1]);
+		})
+		$(document).on("click", "[removeclass]", function(){
+			var arrattr = $(this).attr("removeclass").trim().split(":");
+			$(arrattr[0]).removeClass(arrattr[1]);
+
+		})
+
 
 
 

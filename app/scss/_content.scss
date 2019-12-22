@@ -833,6 +833,7 @@ figcaption{
 		display: none;
 	}
 }
+
 .carbuild-header{
 	.wrapper{
 		display: flex;
@@ -1088,11 +1089,25 @@ figcaption{
 	top: 0;
 	z-index: 150;
 	//padding: 20px;
+	transition: all 0.5s ease;
+	transform: translateX(150%);
+	&.open{
+		transform: scale(1);
+		&:before{
+			pointer-events: auto;
+			opacity: 1;
+		}
+	}
+	&:before{
+		pointer-events: none;
+		opacity: 0;
+	}		
 	&:before{
 		@extend .clafclear;
 		background-color: rgba(black, 0.8);
-		width: 3000px;
-		height: 3000px;
+		width: 5000px;
+		transition: all 0.3s ease;
+		height: 5000px;
 		transform: translateX(-50%);
 		z-index: -1;
 	}

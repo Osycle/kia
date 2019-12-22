@@ -9736,11 +9736,30 @@ figcaption {
   width: 450px;
   background-color: white;
   top: 0;
-  z-index: 150; }
+  z-index: 150;
+  -webkit-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  -webkit-transform: translateX(150%);
+  -ms-transform: translateX(150%);
+  transform: translateX(150%); }
+  .carbuild-summary.open {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1); }
+    .carbuild-summary.open:before {
+      pointer-events: auto;
+      opacity: 1; }
+  .carbuild-summary:before {
+    pointer-events: none;
+    opacity: 0; }
   .carbuild-summary:before {
     background-color: rgba(0, 0, 0, 0.8);
-    width: 3000px;
-    height: 3000px;
+    width: 5000px;
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    height: 5000px;
     -webkit-transform: translateX(-50%);
     -ms-transform: translateX(-50%);
     transform: translateX(-50%);
