@@ -129,38 +129,15 @@
 						</div>
 					</div>
 					<div class="entry-header">
-						<h3>2018 Sorento EX V6</h3>
+						<h3><span car-name-text></span> <span car-position-text></span></h3>
 					</div>
 					<div class="summary-img">
-						<img src="img/other/carbuild-summary.png">
+						<img src="img/other/carbuild-summary.png" summary-img>
 					</div>
 					<div class="summary-table">
 						<table>
-							<tbody>
-								<tr>
-									<td>EX V6 Trim</td>
-									<td>$34,200</td>
-								</tr>
-								<tr>
-									<td>Blaze Blue</td>
-									<td>$0</td>
-								</tr>
-								<tr>
-									<td>Атласная черная кожа</td>
-									<td>$0</td>
-								</tr>
-								<tr>
-									<td>Экскурсионный пакет EX</td>
-									<td>$2,900</td>
-								</tr>
-								<tr>
-									<td>Кнопка дистанционного запуска</td>
-									<td>$50</td>
-								</tr>
-								<tr>
-									<td>Место назначения</td>
-									<td>$990</td>
-								</tr>
+							<tbody summary-table-append>
+
 							</tbody>
 						</table>
 					</div>
@@ -172,7 +149,7 @@
 						</div>
 						<div class="col-md-6">
 							<span class="color-gray-4">от </span>
-							<span class="price">$40,630</span>
+							<span class="price" summary-total-price>$40,630</span>
 						</div>
 					</div>
 				</div>
@@ -203,7 +180,7 @@
 					<div class="container">
 						<div class="row wrapper">
 							<div class="col-md-4 p-h-15">
-								<h3>2019 Sorento L</h3>
+								<h3><span car-name-text>2018 Sorento</span> <span car-position-text>L</span></h3>
 							</div>
 							<div class="col-md-4 p-h-15 price-content">
 								<ul class="list-inline">
@@ -212,7 +189,7 @@
 								</ul>
 							</div>
 							<div class="col-md-4 p-h-15 btn-content">
-								<span class="btn-def" addclass=".carbuild-summary:open">
+								<span class="btn-def" addclass=".carbuild-summary:open" summary-btn>
 									<a href="javascript:;">Сводка</a>
 								</span>
 							</div>
@@ -229,29 +206,30 @@
 						</div>
 					</div>
 					<div class="main-img">
+						<input type="checkbox" name="carname" summary-text="2018 Sorento" price="25990" checked="checked" class="hide">
 						<img src="img/other/carcolor-1.png" class="def-color">
 						<figure>
-							<input type="radio" name="car-color" id="car-color-1" checked="checked">
+							<input type="radio" name="car-color"summary-field="color" summary-text="Цвет" value="Синий" carbuild-color="Синий"  id="car-color-1" checked="checked">
 							<div class="img-wrapper">
-								<img src="img/other/carcolor-1.png">
+								<img src="img/other/carcolor-1.png" car-color="Синий">
 							</div>
 						</figure>
 						<figure>
-							<input type="radio" name="car-color" id="car-color-2">
+							<input type="radio" name="car-color"summary-field="color" summary-text="Цвет" value="Aurora Black" carbuild-color="Aurora Black" id="car-color-2">
 							<div class="img-wrapper">
-								<img src="img/other/carcolor-2.png">
+								<img src="img/other/carcolor-2.png" car-color="Black">
 							</div>
 						</figure>
 						<figure>
-							<input type="radio" name="car-color" id="car-color-3">
+							<input type="radio" name="car-color"summary-field="color" summary-text="Цвет" value="Сапфирный" carbuild-color="Сапфирный"  id="car-color-3">
 							<div class="img-wrapper">
-								<img src="img/other/carcolor-3.png">
+								<img src="img/other/carcolor-3.png" car-color="Сапфирный">
 							</div>
 						</figure>
 						<figure>
-							<input type="radio" name="car-color" id="car-color-4">
+							<input type="radio" name="car-color"summary-field="color" summary-text="Цвет" value="Алый" carbuild-color="Алый"  id="car-color-4">
 							<div class="img-wrapper">
-								<img src="img/other/carcolor-4.png">
+								<img src="img/other/carcolor-4.png" car-color="Алый">
 							</div>
 						</figure>
 					</div>
@@ -267,10 +245,10 @@
 								<div class="col-md-6 p-h-15 color-select">
 									<p>Цвет: <span carbuild-color-text>Aurora Black</span></p>
 									<ul class="list">
-										<li><label for="car-color-1" carbuild-color="Синий" class="color" style="background-color: #0d40e8"></label></li>
-										<li><label for="car-color-2" carbuild-color="Aurora Black" class="color" style="background-color: #232323"></label></li>
-										<li><label for="car-color-3" carbuild-color="Сапфирный" class="color" style="background-color: #131e43"></label></li>
-										<li><label for="car-color-4" carbuild-color="Алый" class="color" style="background-color: #94071a"></label></li>
+										<li><label for="car-color-1" class="color" style="background-color: #0d40e8"></label></li>
+										<li><label for="car-color-2" class="color" style="background-color: #232323"></label></li>
+										<li><label for="car-color-3" class="color" style="background-color: #131e43"></label></li>
+										<li><label for="car-color-4" class="color" style="background-color: #94071a"></label></li>
 									</ul>
 								</div>
 								<div class="col-md-3 p-h-15 btn-last">
@@ -293,8 +271,48 @@
 							<div class="container">
 								<div class="tabnav">
 									<ul class="">
-									  <li class="active"><a href="#tab-pos-1" data-toggle="tab"><h3>LX</h3> <span class="color-gray-4">От </span><span class="price">$27,490</span></a></li>
-									  <li><a href="#tab-pos-2" data-toggle="tab"><h3>LX</h3> <span class="color-gray-4">От </span><span class="price">$27,490</span></a></li>
+									  <li>
+									  	<a href="#tab-pos-1" data-toggle="tab">
+									  		<h3>L</h3> <span class="color-gray-4">От </span><span class="price">$25,990</span>
+									  		<input summary-field="position" summary-text="L" price="25990" type="radio" name="carpos" class="hide">
+									  	</a>
+									  </li>
+									  <li class="active">
+									  	<a href="#tab-pos-2" data-toggle="tab">
+									  		<h3>LX</h3> <span class="color-gray-4">От </span><span class="price">$27,490</span>
+									  		<input summary-field="position" summary-text="LX" price="27490" type="radio" name="carpos" class="hide" checked="checked">
+									  	</a>
+									  </li>
+									  <li>
+									  	<a href="#tab-pos-3" data-toggle="tab">
+									  		<h3>LX V6</h3> <span class="color-gray-4">От </span><span class="price">$31,290</span>
+									  		<input summary-field="position" summary-text="LX V6" price="31290" type="radio" name="carpos" class="hide">
+									  	</a>
+									  </li>
+									  <li>
+									  	<a href="#tab-pos-4" data-toggle="tab">
+									  		<h3>EX 2.0T</h3> <span class="color-gray-4">От </span><span class="price">$33,100</span>
+									  		<input summary-field="position" summary-text="EX 2.0T" price="33100" type="radio" name="carpos" class="hide">
+									  	</a>
+									  </li>
+									  <li>
+									  	<a href="#tab-pos-5" data-toggle="tab">
+									  		<h3>EX V6</h3> <span class="color-gray-4">От </span><span class="price">$35,590</span>
+									  		<input summary-field="position" summary-text="EX V6" price="35590" type="radio" name="carpos" class="hide">
+									  	</a>
+									  </li>
+									  <li>
+									  	<a href="#tab-pos-6" data-toggle="tab">
+									  		<h3>SX</h3> <span class="color-gray-4">От </span><span class="price">$39,900</span>
+									  		<input summary-field="position" summary-text="SX" price="39900" type="radio" name="carpos" class="hide">
+									  	</a>
+									  </li>
+									  <li>
+									  	<a href="#tab-pos-7" data-toggle="tab">
+									  		<h3>SX Limited</h3> <span class="color-gray-4">От </span><span class="price">$44,690</span>
+									  		<input summary-field="position" summary-text="SX Limited" price="44690" type="radio" name="carpos" class="hide">
+									  	</a>
+									  </li>
 									</ul>
 								</div>
 							</div>
@@ -310,7 +328,7 @@
 												<div>
 												<br>
 												<label role="button">
-													<input type="checkbox" name="" class="hide">
+													<input summary-field="addpack" summary-text="Полный привод" price="1700" type="checkbox" name="addpack" class="hide">
 													<span class="va-middle checkbox-style-1"></span>
 													<span class="m-l-10 va-middle">Полный привод +$1700</span>
 												</label>
@@ -330,7 +348,7 @@
 									  		<div class="item">
 									  			<div class="align-center">
 														<label role="button">
-															<input type="checkbox" name="" class="hide">
+															<input summary-field="addpack" summary-text="Удобный пакет" price="1700" type="checkbox" name="addpack" class="hide">
 															<span class="va-middle checkbox-style-1"></span>
 															<span class="m-l-10 va-middle">Удобный пакет</span>
 														</label>
@@ -339,18 +357,21 @@
 									  			</div>
 													<div id="item-1" class="collapse-body collapse">
 														<br>
-														<ul>
-															<li>lorem</li>
-															<li>lorem</li>
-															<li>lorem</li>
-															<li>lorem</li>
-														</ul>
+														<p>Автономное экстренное торможение (AEB)</p>
+														<p>Усовершенствованный интеллектуальный круиз-контроль (ASCC)</p>
+														<p>Система предупреждения о прямом столкновении (FCWS)</p>
+														<p>Система предупреждения о выходе из полосы движения (LDWS)</p>
+														<p>Электронный стояночный тормоз (EPB) с автоматическим удержанием</p>
+														<p>Панорамный люк с зонтиком</p>
+														<p>Светодиодная карта и освещение комнаты</p>
+														<p>Низкопрофильные рейлинги, хромированная отделка</p>
+														<p>110-вольтный инвертор</p>
 													</div>
 									  		</div>
 									  		<div class="item">
 									  			<div class="align-center">
 														<label role="button">
-															<input type="checkbox" name="" class="hide">
+															<input summary-field="addpack" summary-text="3rd Row Seating Package" price="1490" type="checkbox" name="addpack" class="hide">
 															<span class="va-middle checkbox-style-1"></span>
 															<span class="m-l-10 va-middle">3rd Row Seating Package</span>
 														</label>
@@ -370,7 +391,7 @@
 									  		<div class="item">
 									  			<div class="align-center">
 														<label role="button">
-															<input type="checkbox" name="" class="hide">
+															<input summary-field="addpack" summary-text="Ключ дистанционного запуска" price="425" type="checkbox" name="addpack" class="hide">
 															<span class="va-middle checkbox-style-1"></span>
 															<span class="m-l-10 va-middle">Ключ дистанционного запуска</span>
 														</label>

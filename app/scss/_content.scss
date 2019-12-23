@@ -1066,6 +1066,12 @@ figcaption{
 		}
 	}
 	.collapse-body{
+		padding-left: 15px;
+		padding-right: 15px;
+		@media (min-width: 992px){
+			padding-left: 40px;
+			padding-right: 40px;
+		}
 		p{
 
 		}

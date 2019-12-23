@@ -444,16 +444,117 @@
 		});
 		$(window).trigger("scroll");
 
+		$('[data-toggle="tab"]').on("click", function(){
+			try{
+				var input = $(this).find("input");
+				input[0].checked = true;
+				input.trigger("change");
+			}catch(e){
+
+			}
+		})
+
+		window.Summary = {
+
+			car: {},
 
 
+			addTable: function(tablerow){
+				var appendEl = 
+												'<tr>'+
+													'<td>'+tablerow.text+'</td>'+
+													'<td>'+tablerow.value+'</td>'+
+												'</tr>';
+				$("[summary-table-append]").append(appendEl);
+			},
+			res: function(){
+				Summary.car["addpack"] = [];
+				$("[summary-field]:checked").map(function(i, el){
 
+					el = $(el);
+					var nameField = el.attr("summary-field");
+					var text = el.attr("summary-text");
+					var value = el.attr("value");
+					var price = el.attr("price");
+					var field = {};
+
+					if( text ) field["text"] = text;
+					if( value ) field["value"] = value;
+					if( price ) field["price"] = price;
+
+					if( nameField == "addpack" ){
+						Summary.car["addpack"].push(field);
+					}else{
+						Summary.car[nameField] = field;
+					}
+
+					//console.log(nameField);
+				})
+			},
+			calc: function(){
+				var color = Summary.car.color.value;
+				var imgSrc = $("[car-color='"+color+"']").attr("src");
+				var field;
+
+				$("[summary-img]").attr("src", imgSrc)
+				$("[car-name-text]").text($("[name='carname']").attr("summary-text"));
+				$("[car-position-text]").text(Summary.car.position.text);
+				for( field in Summary.car){
+					var elField = Summary.car[field];
+					//console.log(elField);
+					var tableRow = {
+						text: elField.text,
+						value: elField.value || elField.price,
+					}
+					if( field == "name" || field == "color")
+						continue;
+					if( field == "addpack" ){
+						//console.log(elField[i]);
+						for (var i = 0; i < elField.length; i++) {
+							tableRow = {
+								text: elField[i].text,
+								value: elField[i].value || elField[i].price,
+							}
+							Summary.addTable(tableRow);
+						}
+						continue;
+					}
+					Summary.addTable(tableRow);
+				}
+				var totalPrice = 0;
+				for( field in Summary.car){
+					var elField = Summary.car[field];
+					if ( "price" in elField ){
+						totalPrice += elField.price*1;
+					}
+					if( field == "addpack" ){
+						//console.log(elField);
+						for (var i = 0; i < elField.length; i++) {
+							totalPrice += elField[i].price*1;
+						}
+					}
+				}
+				$('[summary-total-price]').text(totalPrice);
+			}
+		}
 
 
 		//car-color
+		$(document).on("click", '[summary-btn]', function(){
+			$("[summary-table-append] *").remove();
+			Summary.res();
+			Summary.calc();
+			//$("[summary-car-color]:checked")
+		});
+		$(document).on("change", '[summary-field="position"]', function(){
+			$('[summary-field="addpack"]').map(function(i, el){
+				el.checked = false;
+			})
+		})
 		$(document).on("click", "[carbuild-mode-change]", function(){
 			$("[carbuild-mode]").attr("carbuild-mode", $(this).attr("carbuild-mode-change"));
 		})
-		$(document).on("click", "[carbuild-color]", function(){
+		$(document).on("change", "[carbuild-color]", function(){
 			$("[carbuild-color-text]").text($(this).attr("carbuild-color"));
 		})
 		$(document).on("click", "[addclass]", function(){
@@ -463,9 +564,9 @@
 		$(document).on("click", "[removeclass]", function(){
 			var arrattr = $(this).attr("removeclass").trim().split(":");
 			$(arrattr[0]).removeClass(arrattr[1]);
-
 		})
-
+		Summary.res();
+		Summary.calc();
 
 
 

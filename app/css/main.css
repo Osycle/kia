@@ -9727,6 +9727,14 @@ figcaption {
   font-size: 1.5em;
   margin-left: 20px; }
 
+.addpacks .collapse-body {
+  padding-left: 15px;
+  padding-right: 15px; }
+  @media (min-width: 992px) {
+    .addpacks .collapse-body {
+      padding-left: 40px;
+      padding-right: 40px; } }
+
 .addpacks-price {
   font-weight: 500; }
 
