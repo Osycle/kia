@@ -807,26 +807,26 @@ figcaption{
 
 //carbuild
 [carbuild-mode="pos"]{
-	.carbuild-content{
-		background-image: none !important;
-		.main-img{
-			height: 360px;
+	// .carbuild-content{
+	// 	background-image: none !important;
+	// 	.main-img{
+	// 		height: 360px;
 
-			&:before{
-				background: #e4e4e4;
-			}
-			.img-wrapper, .def-color{
-				margin-top: 0;
-				transition: none !important;
-			}
-		}
-		.link-content{
-			display: none;
-		}
-	}
-	.carbuild-footer{
-		display: none;
-	}
+	// 		&:before{
+	// 			background: #e4e4e4;
+	// 		}
+	// 		.img-wrapper, .def-color{
+	// 			margin-top: 0;
+	// 			transition: none !important;
+	// 		}
+	// 	}
+	// 	.link-content{
+	// 		display: none;
+	// 	}
+	// }
+	// .carbuild-footer{
+	// 	display: none;
+	// }
 }
 [carbuild-mode="def"]{
 	.carbuild-pos{
@@ -860,13 +860,14 @@ figcaption{
 	}
 }
 .carbuild-content{
-	height: 600px;
-	background-size: cover;
-	background-position: center;
+	//height: 600px;
 	position: relative;
 	.main-img{
+		background-size: cover;
+		background-position: center;
 		display: flex;
-		height: 600px;
+		min-height: 600px;
+		height: calc( 100vh - 160px);
 		align-items: center;
 		justify-content: center;
 		text-align: center;
@@ -1019,6 +1020,7 @@ figcaption{
 			li{
 				opacity: 0.5;
 				position: relative;
+				width: 100%;
 				&:before{
 					@extend .clafclear;
 					height: 4px;
@@ -1099,16 +1101,16 @@ figcaption{
 	transform: translateX(150%);
 	&.open{
 		transform: scale(1);
-		&:before{
+		.bg-shadow{
 			pointer-events: auto;
 			opacity: 1;
 		}
 	}
-	&:before{
+	.bg-shadow{
 		pointer-events: none;
 		opacity: 0;
-	}		
-	&:before{
+	}
+	.bg-shadow{
 		@extend .clafclear;
 		background-color: rgba(black, 0.8);
 		width: 5000px;
@@ -1182,10 +1184,37 @@ figcaption{
 	.price-content{
 		display: flex;
 		align-items: center;
+		justify-content: space-between;
 		.color-gray-4{
 			//padding-left: 7px;
 			//padding-right: 7px;
 			font-size: em(15);
 		}
+		.col-md-6:nth-child(2){
+			text-align: right;
+		}
+	}
+}
+.summary-table{
+	td{
+		font-weight: 800;
+		&:nth-child(2){
+			text-align: right;
+		}
+	}
+}
+@media print {
+	body *:not(.carbuild-summary){
+		//display: none;
+	}
+	main{
+		display: none;
+	}
+	.carbuild-summary{
+		background-color: white;
+		width: 100%;
+	}
+	.summary-header, .link-onlinechat, .btn-opacity{
+		display: none !important;
 	}
 }

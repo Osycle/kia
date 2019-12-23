@@ -112,6 +112,7 @@
 
 
 		<div class="carbuild-summary">
+			<span class="bg-shadow" removeclass=".carbuild-summary:open"></span>
 			<span class="btn-close" role="button" removeclass=".carbuild-summary:open">
 				<span class="stick"></span>
 				<span class="stick"></span>
@@ -124,7 +125,7 @@
 							<ul class="list-inline">
 								<li><a href=""><i class="fa fa-share-alt"></i></a></li>
 								<li><a href=""><i class="fa fa-envelope"></i></a></li>
-								<li><a href=""><i class="fa fa-print"></i></a></li>
+								<li class="print-summary"><a href=""><i class="fa fa-print"></i></a></li>
 							</ul>
 						</div>
 					</div>
@@ -165,7 +166,7 @@
 						<h4>Kia Downtown Los Angeles </h4>
 						<p class="color-gray-4">1945 S. Figueroa Street <br>Los Angeles, CA 90007 <br>(310) 955-0855</p>
 						<br>
-						<p><i class="fa fa-comment p-r-10"></i>Онлайн чат</p>
+						<p><a href="" class="link-onlinechat"><i class="fa fa-comment p-r-10"></i>Онлайн чат</a></p>
 					</div>
 				</div>
 			</div>
@@ -175,16 +176,16 @@
 		<main data-aos="fade" data-aos-delay="0">
 
 
-			<div class="carbuild" carbuild-mode="pos">
+			<div class="carbuild" carbuild-mode="def">
 				<div class="carbuild-header">
 					<div class="container">
 						<div class="row wrapper">
 							<div class="col-md-4 p-h-15">
-								<h3><span car-name-text>2018 Sorento</span> <span car-position-text>L</span></h3>
+								<h3><span car-name-text></span> <span car-position-text></span></h3>
 							</div>
 							<div class="col-md-4 p-h-15 price-content">
 								<ul class="list-inline">
-									<li><span class="color-gray-4">От</span> <span class="price">$25,990</span> </li>
+									<li><span class="color-gray-4">От</span> <span class="price" car-price-text></span> </li>
 									<li><span class="price">$228</span> <span class="color-gray-4">/мес. лизинг*</span></li>
 								</ul>
 							</div>
@@ -196,7 +197,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="carbuild-content clearfix" style="background-image: url('../img/other/bg-car-color-1.jpg');">
+				<div class="carbuild-content clearfix">
 					<div class="container">
 						<div class="link-content">
 							<ul class="list-inline">
@@ -205,7 +206,7 @@
 							</ul>
 						</div>
 					</div>
-					<div class="main-img">
+					<div class="main-img" style="background-image: url('../img/other/bg-car-color-1.jpg');">
 						<input type="checkbox" name="carname" summary-text="2018 Sorento" price="25990" checked="checked" class="hide">
 						<img src="img/other/carcolor-1.png" class="def-color">
 						<figure>
@@ -237,7 +238,7 @@
 						<div class="container">
 							<div class="wrapper-footer row">
 								<div class="col-md-3 p-h-15">
-									<p>Отделка L</p>
+									<p>Отделка <span car-position-text></span></p>
 									<span class="btn-opacity" carbuild-mode-change="pos">
 										<a href="javascript:;">Изменить отделку</a>
 									</span>

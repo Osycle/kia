@@ -7073,7 +7073,7 @@ table {
 .claf, [data-flicker]:before, .checkbox-style-1:before {
   content: " "; }
 
-.clafclear, .header-info .info-item:not(:last-child):before, .menu ul.menu-list > li:before, .hr-style-1:before, .h-style-2:before, .h1-style-2 h1:not(.no-style):before, .h1-style-2 .h1:not(.no-style):before, .h1-style-2.text-center h1:after, .h1-style-2.text-center .h1:after, .h2-style-1 h2:not(.no-style):before, .arrow-pic:before, .carbuild-content .main-img:before, .carbuild-pos-tabs .tabnav ul li:before, .carbuild-summary:before, .footer-lang li:not(:last-child):before {
+.clafclear, .header-info .info-item:not(:last-child):before, .menu ul.menu-list > li:before, .hr-style-1:before, .h-style-2:before, .h1-style-2 h1:not(.no-style):before, .h1-style-2 .h1:not(.no-style):before, .h1-style-2.text-center h1:after, .h1-style-2.text-center .h1:after, .h2-style-1 h2:not(.no-style):before, .arrow-pic:before, .carbuild-content .main-img:before, .carbuild-pos-tabs .tabnav ul li:before, .carbuild-summary .bg-shadow, .footer-lang li:not(:last-child):before {
   content: " ";
   height: 100%;
   width: 100%;
@@ -9477,23 +9477,6 @@ figcaption {
   .hybridtype img {
     margin-right: 10px; }
 
-[carbuild-mode="pos"] .carbuild-content {
-  background-image: none !important; }
-  [carbuild-mode="pos"] .carbuild-content .main-img {
-    height: 360px; }
-    [carbuild-mode="pos"] .carbuild-content .main-img:before {
-      background: #e4e4e4; }
-    [carbuild-mode="pos"] .carbuild-content .main-img .img-wrapper, [carbuild-mode="pos"] .carbuild-content .main-img .def-color {
-      margin-top: 0;
-      -webkit-transition: none !important;
-      -o-transition: none !important;
-      transition: none !important; }
-  [carbuild-mode="pos"] .carbuild-content .link-content {
-    display: none; }
-
-[carbuild-mode="pos"] .carbuild-footer {
-  display: none; }
-
 [carbuild-mode="def"] .carbuild-pos {
   display: none; }
 
@@ -9536,17 +9519,18 @@ figcaption {
     height: 100%; }
 
 .carbuild-content {
-  height: 600px;
-  -webkit-background-size: cover;
-  background-size: cover;
-  background-position: center;
   position: relative; }
   .carbuild-content .main-img {
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-position: center;
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    height: 600px;
+    min-height: 600px;
+    height: -webkit-calc( 100vh - 160px);
+    height: calc( 100vh - 160px);
     -webkit-box-align: center;
     -webkit-align-items: center;
     -ms-flex-align: center;
@@ -9696,7 +9680,8 @@ figcaption {
       align-items: center; }
     .carbuild-pos-tabs .tabnav ul li {
       opacity: 0.5;
-      position: relative; }
+      position: relative;
+      width: 100%; }
       .carbuild-pos-tabs .tabnav ul li:before {
         height: 4px;
         background-color: transparent;
@@ -9755,13 +9740,13 @@ figcaption {
     -webkit-transform: scale(1);
     -ms-transform: scale(1);
     transform: scale(1); }
-    .carbuild-summary.open:before {
+    .carbuild-summary.open .bg-shadow {
       pointer-events: auto;
       opacity: 1; }
-  .carbuild-summary:before {
+  .carbuild-summary .bg-shadow {
     pointer-events: none;
     opacity: 0; }
-  .carbuild-summary:before {
+  .carbuild-summary .bg-shadow {
     background-color: rgba(0, 0, 0, 0.8);
     width: 5000px;
     -webkit-transition: all 0.3s ease;
@@ -9836,9 +9821,29 @@ figcaption {
     -webkit-box-align: center;
     -webkit-align-items: center;
     -ms-flex-align: center;
-    align-items: center; }
+    align-items: center;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between; }
     .carbuild-summary .price-content .color-gray-4 {
       font-size: 1.07143em; }
+    .carbuild-summary .price-content .col-md-6:nth-child(2) {
+      text-align: right; }
+
+.summary-table td {
+  font-weight: 800; }
+  .summary-table td:nth-child(2) {
+    text-align: right; }
+
+@media print {
+  main {
+    display: none; }
+  .carbuild-summary {
+    background-color: white;
+    width: 100%; }
+  .summary-header, .link-onlinechat, .btn-opacity {
+    display: none !important; } }
 
 /* 
 		_footer.scss

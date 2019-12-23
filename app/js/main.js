@@ -457,7 +457,7 @@
 		window.Summary = {
 
 			car: {},
-
+			prefix: "$",
 
 			addTable: function(tablerow){
 				var appendEl = 
@@ -467,7 +467,12 @@
 												'</tr>';
 				$("[summary-table-append]").append(appendEl);
 			},
-			res: function(){
+
+			parsePriceText: function(price){
+				return this.prefix+spaceBetweenNum(price);
+			},
+			calc: function(){
+
 				Summary.car["addpack"] = [];
 				$("[summary-field]:checked").map(function(i, el){
 
@@ -489,22 +494,25 @@
 					}
 
 					//console.log(nameField);
-				})
-			},
-			calc: function(){
+				});
+
 				var color = Summary.car.color.value;
 				var imgSrc = $("[car-color='"+color+"']").attr("src");
-				var field;
+				var positionText = Summary.car.position.text;
+				var positionPrice = Summary.parsePriceText(Summary.car.position.price);
+				var carName = $("[name='carname']").attr("summary-text");
 
 				$("[summary-img]").attr("src", imgSrc)
-				$("[car-name-text]").text($("[name='carname']").attr("summary-text"));
-				$("[car-position-text]").text(Summary.car.position.text);
-				for( field in Summary.car){
+				$("[car-name-text]").text(carName);
+				$("[car-position-text]").text(positionText);
+				$("[car-price-text]").text(positionPrice);
+
+				for( var field in Summary.car){
 					var elField = Summary.car[field];
 					//console.log(elField);
 					var tableRow = {
 						text: elField.text,
-						value: elField.value || elField.price,
+						value: elField.value || Summary.parsePriceText(elField.price),
 					}
 					if( field == "name" || field == "color")
 						continue;
@@ -513,7 +521,7 @@
 						for (var i = 0; i < elField.length; i++) {
 							tableRow = {
 								text: elField[i].text,
-								value: elField[i].value || elField[i].price,
+								value: elField[i].value || Summary.parsePriceText(elField[i].price),
 							}
 							Summary.addTable(tableRow);
 						}
@@ -534,7 +542,7 @@
 						}
 					}
 				}
-				$('[summary-total-price]').text(totalPrice);
+				$('[summary-total-price]').text(Summary.parsePriceText(totalPrice));
 			}
 		}
 
@@ -542,14 +550,16 @@
 		//car-color
 		$(document).on("click", '[summary-btn]', function(){
 			$("[summary-table-append] *").remove();
-			Summary.res();
 			Summary.calc();
 			//$("[summary-car-color]:checked")
 		});
 		$(document).on("change", '[summary-field="position"]', function(){
+			Summary.calc();
+			$("[car-position-text]").text(Summary.car.position.text);
 			$('[summary-field="addpack"]').map(function(i, el){
 				el.checked = false;
 			})
+
 		})
 		$(document).on("click", "[carbuild-mode-change]", function(){
 			$("[carbuild-mode]").attr("carbuild-mode", $(this).attr("carbuild-mode-change"));
@@ -565,7 +575,13 @@
 			var arrattr = $(this).attr("removeclass").trim().split(":");
 			$(arrattr[0]).removeClass(arrattr[1]);
 		})
-		Summary.res();
+		$(document).on("click", ".print-summary", function(){
+			print();
+		})
+		$(document).on("click", ".carbuild-summary", function(e){
+			console.log(e, this);
+		})
+
 		Summary.calc();
 
 
@@ -629,21 +645,12 @@ function roundFix( num, cnt ){
 	return num.substring( 0,  cnt)*1
 }
 
-function intSpace( int, replaceType ){
-		var cnt = 0;
-		var newInt = "";
-		int = int*1;
-		replaceType = replaceType || " ";
-		if( typeof int === NaN )
-			return;
-		var arrInt = (int+"").match(/([0-9])/gim).reverse();
-		for (var i = 0; i < arrInt.length; i++) {
-			cnt++;
-			newInt = arrInt[i]+newInt
-			if(cnt === 3){
-				newInt = replaceType+newInt;
-				cnt = 0;
-			}
-		}
-		return newInt;
+
+function spaceBetweenNum(str, char) {
+	str = str+"";
+	char = char || ","
+	var pattern = /(-?\d+)(\d{3})/;
+	while (pattern.test(str))
+		str = str.replace(pattern, "$1"+char+"$2");
+	return str;
 }
