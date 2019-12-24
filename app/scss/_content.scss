@@ -249,24 +249,13 @@ figcaption{
 	    transform: scale(1.2);
 	    background-position: center;
 	   	filter: blur(0px) brightness(120%);
-			transition: 
-									transform 1.2s ease,
+			transition: transform 1.2s ease,
 									opacity 1s ease-in-out,
 									filter 1s linear 0.5s;
 		}
-		&.is-selected{
-			z-index: 1;
-			opacity: 1;
-			&:before{
-				//background-position: 0;
-			}
-			.img{
-				filter: blur(0);
-				transform: scale(1);
-			}
+		.img{
+			overflow: hidden;
 		}
-	}
-	figure{
 		h1, p, img, .btn-def, .btn-opacity{
 			opacity: 0;
 			transition: 1s ease;
@@ -279,12 +268,7 @@ figcaption{
 			padding: 0 0;
 			transform: matrix(1,0,0,1,0,-7);
 			margin: 0;
-			b{
-				font-weight: 800;
-			}
-			@media (min-width: 992px) {
-
-			}
+			b{font-weight: 800;}
 			@media (max-width: 991px) {
 				font-size: em(26);
 			}
@@ -304,8 +288,42 @@ figcaption{
 		p, img{
 			transform: translateY(20px);	
 		}
+		.carousel-content{
+			position: relative;
+			text-align: center;
+		}
+		.align-i-center{
+			height: 600px;
+			@media (min-width: 992px){
+				.container{
+					margin-bottom: 100px;
+				}
+				padding-left: 60px;
+				padding-right: 60px;
+				//padding-bottom: 300px;
+			}
+		}
+		@media (max-width: 991px) {
+			height: 400px;
+			.align-i-center{
+				height: 150px;
+			}
+			.btn-content{
+				display: none;
+			}
+		}
+	}
+
+	.is-selected{
+		z-index: 1;
+		opacity: 1;
+		h1, p, .btn-def, .btn-opacity, img, .img-product{
+			transform: scale(1);
+			opacity: 1;
+		}
 		.img{
-			overflow: hidden;
+			filter: blur(0);
+			transform: scale(1);
 		}
 	}
 
@@ -315,13 +333,6 @@ figcaption{
 			a{
 				font-size: 14px;
 			}
-		}
-	}
-
-	.is-selected{
-		h1, p, .btn-def, .btn-opacity, img, .img-product{
-			transform: scale(1);
-			opacity: 1;
 		}
 	}
 
@@ -384,33 +395,7 @@ figcaption{
     	width: 100%;
     }
 	}
-	.carousel-content{
-		position: relative;
-		text-align: center;
-		.align-i-center{
-			height: 600px;
-			.container{
-				margin-bottom: 100px;
-			}
-			@media (min-width: 992px){
-				padding-left: 60px;
-				padding-right: 60px;
-				//padding-bottom: 300px;
-			}
-		}
 
-		@media (max-width: 991px) {
-			.img-content{
-				display: none;
-			}
-			.align-i-center{
-				height: calc(100vh - 70px);
-			}
-		}
-		@media (min-width: 992px) {
-
-		}
-	}
 	.bnr-car{
 		height: 300px;
 		margin-top: -180px;
@@ -440,6 +425,11 @@ figcaption{
 				z-index: -1;
 				bottom: 80px;
 			}
+		}
+		@media (max-width: 991px) {
+			height: 200px;
+			position: absolute;
+			margin-top: 0;
 		}
 	}
 	figure{
@@ -519,13 +509,15 @@ figcaption{
 			top: auto;
 			height: auto;
 			text-align: center;
+			bottom: 10px;
+			//position: relative;
+			justify-content: center;
 			li{
-				width: 15px;
-				height: 15px;
+				width: 25px;
+				height: 10px;
 				margin: 0 12px 0 12px;
 				display: inline-block;
-				border: 1px solid white;
-				background-color: transparent;
+				background-color: white;
 				&.is-selected{
 					border: none;
 				}
@@ -570,7 +562,9 @@ figcaption{
 		position: relative;
 	}
 	.entry-content{
-		min-height: 850px;
+		@media (min-width: 992px){
+			min-height: 850px;
+		}
 	}
 	h5{
 		text-transform: uppercase;
@@ -613,6 +607,10 @@ figcaption{
 	.btn-content{
 		@extend .flex-adaptive;
 		align-items: center;
+		.btn-def{
+			margin-top: 20px;
+			margin-bottom: 20px;
+		}
 	}
 	.text-content{
 		color: rgba(white, 0.6);
@@ -627,28 +625,80 @@ figcaption{
 		position: absolute;
 		bottom: 10%;
 	}
+	@media(max-width: 991px) {
+		.tabnav, .desc-content, .img-content{
+			position: relative;
+		}
+		.entry-content{
+			padding-top: 10px;
+			padding-bottom: 30px;
+		}
+		.tabnav{
+			padding: 20px 15px;
+		}
+		.desc-content{
+			width: 100%;
+		}
+		.img-content{
+			filter: brightness(0.7);
+		}
+		.text-footer{
+			display: none;
+		}
+		.btn-def{
+			a{
+				padding: 10px 15px;
+			}
+		}
+	}
 }
 
 
 .short-advancar{
 	.flex-wrapper{
 		display: flex;
+		@media (max-width: 991px){
+			flex-direction: column;
+			.item{
+				width: 100%;
+			}
+		}
 	}
 	.item{
-		min-width: (100/3)#{"%"};
-		max-width: (100/3)#{"%"};
-		min-height: 800px;
 		position: relative;
+		overflow: hidden;
+		@media (min-width: 992px){
+			min-width: (100/3)#{"%"};
+			max-width: (100/3)#{"%"};
+		}
+		@media (max-width: 991px){
+			
+		}
+
+	}
+	.img-content, .item, .img{
+		height: 100%;
 	}
 	.img{
 		background-size: cover;
-		height: 800px;
+		@media (max-width: 991px) {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			left: 0;
+			top: 0;
+		}
 	}
 	.desc-content{
 		color: white;
 		position: absolute;
 		bottom: 0;
 		padding: 30px;
+		@media (max-width: 991px){
+			//bottom: 50%;
+			//transform: translateY(50%);
+			position: relative;
+		}
 	}
 	.btn-ar{
 		justify-content: flex-end;
@@ -704,6 +754,12 @@ figcaption{
 		align-items: center;
 		h3{
 			font-weight: 900;
+		}
+		@media (max-width: 991px){
+			flex-direction: column;
+			.text{
+				margin-bottom: 15px;
+			}
 		}
 	}
 	.owl-item{
@@ -839,6 +895,14 @@ figcaption{
 		display: flex;
 		align-items: center;
 		height: 80px;
+		@media (max-width: 991px){
+			height: auto;
+			flex-direction: column;
+			padding-top: 20px;
+			&>div{
+				margin-bottom: 20px;
+			}
+		}
 	}
 	.price-content{
 		text-align: center;
@@ -876,32 +940,43 @@ figcaption{
 			@extend .clafclear;
 			background: radial-gradient(circle farthest-side at 50% 50%, transparent, rgba(black, 0.5));
 		}
+		figure{
+
+		}
 		input{
 			z-index: 1;
 			position: relative;
 			display: none;
 			&:checked{
 				& ~ .img-wrapper{
-					opacity: 1;
-					z-index: 2;
-					transition: all 0.6s steps(50);
+					img{
+						opacity: 1;
+						z-index: 2;
+						transition: all 0.6s steps(50);
+					}
 				}
 			}
 		}
 		.def-color{
 			filter: grayscale(1);
+			position: absolute;
+			top: 0;
+			left: 0;
+			opacity: 1 !important;
 			z-index: 0;
 			transition: all 0.6s steps(50);
-			margin-top: 10em;
 		}
 		.img-wrapper{
-			opacity: 0;
-			transition: all 0.6s steps(50);
+			img{
+				opacity: 0;
+				transition: all 0.6s steps(50);
+			}
 			margin-top: 5em;
 			@extend .trans-center;
 		}
 		img{
 			z-index: 1;
+			position: relative;
 		}
 	}
 	.link-content{
@@ -929,6 +1004,7 @@ figcaption{
 	}
 	.carbuild-footer{
 		color: white;
+		display: none;
 		.container{
 			position: relative;
 		}

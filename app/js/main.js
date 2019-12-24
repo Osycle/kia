@@ -582,7 +582,8 @@
 			console.log(e, this);
 		})
 
-		Summary.calc();
+		if($(".carbuild-summary").length)
+			Summary.calc();
 
 
 

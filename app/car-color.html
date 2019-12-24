@@ -90,7 +90,7 @@
 				<div class="min-menu-logo">
 					<div>
 						<a href="index.html" title="">
-							<div class="img" style="background-image: url('img/logo-white.svg');"></div>
+							<div class="img" style="background-image: url('img/logo.png');"></div>
 						</a>
 					</div>	
 				</div>
@@ -208,10 +208,10 @@
 					</div>
 					<div class="main-img" style="background-image: url('../img/other/bg-car-color-1.jpg');">
 						<input type="checkbox" name="carname" summary-text="2018 Sorento" price="25990" checked="checked" class="hide">
-						<img src="img/other/carcolor-1.png" class="def-color">
 						<figure>
 							<input type="radio" name="car-color"summary-field="color" summary-text="Цвет" value="Синий" carbuild-color="Синий"  id="car-color-1" checked="checked">
 							<div class="img-wrapper">
+								<img src="img/other/carcolor-1.png" class="def-color">
 								<img src="img/other/carcolor-1.png" car-color="Синий">
 							</div>
 						</figure>
@@ -240,7 +240,7 @@
 								<div class="col-md-3 p-h-15">
 									<p>Отделка <span car-position-text></span></p>
 									<span class="btn-opacity" carbuild-mode-change="pos">
-										<a href="javascript:;">Изменить отделку</a>
+										<a href="#carbuild-pos" data-scroll>Изменить отделку</a>
 									</span>
 								</div>
 								<div class="col-md-6 p-h-15 color-select">
@@ -260,7 +260,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="carbuild-pos">
+					<div class="carbuild-pos" id="carbuild-pos">
 						<span class="btn-close" carbuild-mode-change="def" role="button">
 							<span class="stick"></span>
 							<span class="stick"></span>
@@ -411,9 +411,160 @@
 									  		</div>
 
 									  	</div>
-
 									  </div>
-									  <div class="tab-pane fade" id="tab-pos-2"><p>iusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</p></div>
+									  <div class="tab-pane fade" id="tab-pos-2">
+									  	<div class="col-md-3">									  		
+									  		<h4>Силовой агрегат</h4>
+												<p>з2,4-литровый DOHC 16-клапанный I-4</p>
+												<p>185 л.с. при 6000 об / мин</p>
+												<p>Автоматическая коробка передач</p>
+												<div>
+												<br>
+												<label role="button">
+													<input summary-field="addpack" summary-text="Полный привод" price="1700" type="checkbox" name="addpack" class="hide">
+													<span class="va-middle checkbox-style-1"></span>
+													<span class="m-l-10 va-middle">Полный привод +$1700</span>
+												</label>
+												</div>
+									  	</div>
+									  	<div class="col-md-3">									  		
+									  		<h4>Характеристики LX</h4>
+												<p>Сидение для 7 человек</p>
+												<p>3-й ряд сидений</p>
+												<p>Опция Apple CarPlay ™ / Android Auto ™</p>
+												<p>Опция Smart Driving Technologies</p>
+												<p>Опция подогрева передних сидений</p>
+									  	</div>
+									  	<div class="col-md-6 addpacks">
+									  		<h4>Пакеты и варианты</h4>
+									  		<br>
+									  		<div class="item">
+									  			<div class="align-center">
+														<label role="button">
+															<input summary-field="addpack" summary-text="Удобный пакет" price="1700" type="checkbox" name="addpack" class="hide">
+															<span class="va-middle checkbox-style-1"></span>
+															<span class="m-l-10 va-middle">ПАКЕТ «LOREM IPSUM»</span>
+														</label>
+														<span class="addpacks-price">+$1700</span>
+														<a role="button" data-toggle="collapse" data-parent="#accordion" href=".addpacks #item-1" aria-expanded="false"><i class="fa fa-angle-down"></i></a>
+									  			</div>
+													<div id="item-1" class="collapse-body collapse">
+														<br>
+														<p>Автономное экстренное торможение (AEB)</p>
+														<p>Усовершенствованный интеллектуальный круиз-контроль (ASCC)</p>
+														<p>Система предупреждения о прямом столкновении (FCWS)</p>
+														<p>Система предупреждения о выходе из полосы движения (LDWS)</p>
+														<p>Электронный стояночный тормоз (EPB) с автоматическим удержанием</p>
+														<p>Панорамный люк с зонтиком</p>
+														<p>Светодиодная карта и освещение комнаты</p>
+														<p>Низкопрофильные рейлинги, хромированная отделка</p>
+														<p>110-вольтный инвертор</p>
+													</div>
+									  		</div>
+									  		<div class="item">
+									  			<div class="align-center">
+														<label role="button">
+															<input summary-field="addpack" summary-text="3rd Row Seating Package" price="1490" type="checkbox" name="addpack" class="hide">
+															<span class="va-middle checkbox-style-1"></span>
+															<span class="m-l-10 va-middle">3rd Row Seating Package</span>
+														</label>
+														<span class="addpacks-price">+$1,490</span>
+														<a role="button" data-toggle="collapse" data-parent="#accordion" href=".addpacks #item-2" aria-expanded="false"><i class="fa fa-angle-down"></i></a>
+									  			</div>
+													<div id="item-2" class="collapse-body collapse">
+														<br>
+														<ul>
+															<li>lorem</li>
+															<li>lorem</li>
+															<li>lorem</li>
+															<li>lorem</li>
+														</ul>
+													</div>
+									  		</div>
+									  		<div class="item">
+									  			<div class="align-center">
+														<label role="button">
+															<input summary-field="addpack" summary-text="Ключ дистанционного запуска" price="425" type="checkbox" name="addpack" class="hide">
+															<span class="va-middle checkbox-style-1"></span>
+															<span class="m-l-10 va-middle">Ключ дистанционного запуска</span>
+														</label>
+														<span class="addpacks-price">+$425</span>
+														<a role="button" data-toggle="collapse" data-parent="#accordion" href=".addpacks #item-3" aria-expanded="true"><i class="fa fa-angle-down"></i></a>
+									  			</div>
+													<div id="item-3" class="collapse-body collapse">
+														<br>
+														<ul>
+															<li>lorem</li>
+															<li>lorem</li>
+															<li>lorem</li>
+															<li>lorem</li>
+														</ul>
+													</div>
+									  		</div>
+
+									  	</div>
+									  </div>
+									  <div class="tab-pane fade" id="tab-pos-3">
+								  		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo</p>
+								  		<br>
+								  		<p>consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse</p>
+								  		<p>cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non</p>
+								  		<p>proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+								  		<ul>
+								  			<li>cillum dolore eu fugiat nulla pariatur</li>
+								  			<li>cillum dolore eu fugiat nulla pariatur</li>
+								  			<li>cillum dolore eu fugiat nulla pariatur</li>
+								  		</ul>
+									  </div>
+									  <div class="tab-pane fade" id="tab-pos-4">
+								  		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo</p>
+								  		<br>
+								  		<p>consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse</p>
+								  		<p>cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non</p>
+								  		<p>proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+								  		<ul>
+								  			<li>cillum dolore eu fugiat nulla pariatur</li>
+								  			<li>cillum dolore eu fugiat nulla pariatur</li>
+								  			<li>cillum dolore eu fugiat nulla pariatur</li>
+								  		</ul>
+									  </div>
+									  <div class="tab-pane fade" id="tab-pos-5">
+								  		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo</p>
+								  		<br>
+								  		<p>consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse</p>
+								  		<p>cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non</p>
+								  		<p>proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+								  		<ul>
+								  			<li>cillum dolore eu fugiat nulla pariatur</li>
+								  			<li>cillum dolore eu fugiat nulla pariatur</li>
+								  			<li>cillum dolore eu fugiat nulla pariatur</li>
+								  		</ul>
+									  </div>
+									  <div class="tab-pane fade" id="tab-pos-6">
+								  		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo</p>
+								  		<br>
+								  		<p>consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse</p>
+								  		<p>cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non</p>
+								  		<p>proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+								  		<ul>
+								  			<li>cillum dolore eu fugiat nulla pariatur</li>
+								  			<li>cillum dolore eu fugiat nulla pariatur</li>
+								  			<li>cillum dolore eu fugiat nulla pariatur</li>
+								  		</ul>
+									  </div>
+									  <div class="tab-pane fade" id="tab-pos-7">
+								  		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo</p>
+								  		<br>
+								  		<p>consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse</p>
+								  		<p>cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non</p>
+								  		<p>proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+								  		<ul>
+								  			<li>cillum dolore eu fugiat nulla pariatur</li>
+								  			<li>cillum dolore eu fugiat nulla pariatur</li>
+								  			<li>cillum dolore eu fugiat nulla pariatur</li>
+								  		</ul>
+									  </div>
+
 									</div>
 								</div>
 							</div>
