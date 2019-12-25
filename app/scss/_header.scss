@@ -40,10 +40,10 @@ $header-min-menu: 70px;
 
 .header-hidden{
 	position: relative;
-	height: $header-top-height+$header-bottom-height;
+	height: $header-top-height;
 	display: none;
 	//transition: height 0.3s linear 0.4s;
-	background-color: #333;
+	background-color: transparent;
 	@media ( max-width: 991px ){
 		height: 70px;
 		display: block;
@@ -157,9 +157,10 @@ $header-min-menu: 70px;
     height: 34px;
 	}
 	.logo-red{
-		opacity: 0;
+		//opacity: 0;
+		display: none;
 		z-index: 1;
-		position: absolute;
+		//position: absolute;
 		left: 0;
 	}
 }
@@ -191,11 +192,11 @@ $header-min-menu: 70px;
 		.header-logo{
 			img{
 				&:not(.logo-red){
-					opacity: 0;
+					display: none;
 				}
 			}
 			.logo-red{
-				opacity: 1;
+				display: inline-block;
 			}
 		}
 		.header-top-content{

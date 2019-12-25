@@ -6811,7 +6811,7 @@ tbody.collapse.in {
     list-style-image: url("../img/icons/list-icon.png"); }
     @media (min-width: 992px) {
       .list-style-1 ul:not([class]) li, main ul:not([class]) li {
-        padding-left: 15px; } }
+        padding-left: 5px; } }
 
 /*
 		--BREADCRUMP--
@@ -7997,9 +7997,9 @@ input[type="radio"]:checked ~ .radio-style-1, input[type="radio"]:checked ~ .rad
 
 .header-hidden {
   position: relative;
-  height: 130px;
+  height: 80px;
   display: none;
-  background-color: #333; }
+  background-color: transparent; }
   @media (max-width: 991px) {
     .header-hidden {
       height: 70px;
@@ -8096,7 +8096,7 @@ input[type="radio"]:checked ~ .radio-style-1, input[type="radio"]:checked ~ .rad
   font-weight: 700;
   font-size: 0.95em; }
 
-.header-bar .flex-adaptive, .header-bar .short-somecar .btn-content, .short-somecar .header-bar .btn-content {
+.header-bar .flex-adaptive, .header-bar .short-somecar .btn-content, .short-somecar .header-bar .btn-content, .header-bar .dealer-items figure, .dealer-items .header-bar figure {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -8119,10 +8119,10 @@ input[type="radio"]:checked ~ .radio-style-1, input[type="radio"]:checked ~ .rad
   -webkit-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease; }
-  .header-bar .flex-adaptive:hover, .header-bar .short-somecar .btn-content:hover, .short-somecar .header-bar .btn-content:hover {
+  .header-bar .flex-adaptive:hover, .header-bar .short-somecar .btn-content:hover, .short-somecar .header-bar .btn-content:hover, .header-bar .dealer-items figure:hover, .dealer-items .header-bar figure:hover {
     background: #bb162b;
     color: white; }
-    .header-bar .flex-adaptive:hover .icon-bar, .header-bar .short-somecar .btn-content:hover .icon-bar, .short-somecar .header-bar .btn-content:hover .icon-bar {
+    .header-bar .flex-adaptive:hover .icon-bar, .header-bar .short-somecar .btn-content:hover .icon-bar, .short-somecar .header-bar .btn-content:hover .icon-bar, .header-bar .dealer-items figure:hover .icon-bar, .dealer-items .header-bar figure:hover .icon-bar {
       background-color: white; }
 
 .header-bar .icon-bar {
@@ -8139,9 +8139,8 @@ input[type="radio"]:checked ~ .radio-style-1, input[type="radio"]:checked ~ .rad
     width: auto;
     height: 34px; }
   .header-logo .logo-red {
-    opacity: 0;
+    display: none;
     z-index: 1;
-    position: absolute;
     left: 0; }
 
 [data-toggle-menbar]:hover {
@@ -8163,10 +8162,10 @@ input[type="radio"]:checked ~ .radio-style-1, input[type="radio"]:checked ~ .rad
   box-shadow: 0px 5px 20px -10px rgba(0, 0, 0, 0.3); }
 
 .header-scroll.scrolled .header-logo img:not(.logo-red), .header-scroll.header-pages .header-logo img:not(.logo-red) {
-  opacity: 0; }
+  display: none; }
 
 .header-scroll.scrolled .header-logo .logo-red, .header-scroll.header-pages .header-logo .logo-red {
-  opacity: 1; }
+  display: inline-block; }
 
 .header-scroll.scrolled .header-top-content .menu, .header-scroll.header-pages .header-top-content .menu {
   color: black; }
@@ -9275,6 +9274,20 @@ figcaption {
     left: 30px;
     z-index: 1; }
 
+.tabnav-1 li {
+  font-size: 1.28571em;
+  font-weight: 700;
+  display: inline-block;
+  border-top: 4px solid transparent; }
+  .tabnav-1 li a {
+    display: block;
+    padding-top: 5px;
+    padding-bottom: 5px; }
+  .tabnav-1 li:not(:first-child) {
+    margin-left: 20px; }
+  .tabnav-1 li.active {
+    border-color: #bb162b; }
+
 .short-somecar {
   background-color: #1f1f1f;
   position: relative;
@@ -9284,6 +9297,10 @@ figcaption {
   @media (min-width: 992px) {
     .short-somecar .entry-content {
       min-height: 850px; } }
+  .short-somecar .tabnav-1 {
+    position: absolute;
+    bottom: 10%;
+    right: 0; }
   .short-somecar h5 {
     text-transform: uppercase; }
   .short-somecar .desc-content {
@@ -9297,23 +9314,6 @@ figcaption {
       -webkit-transform: translateX(25%);
       -ms-transform: translateX(25%);
       transform: translateX(25%); }
-  .short-somecar .tabnav {
-    position: absolute;
-    bottom: 10%;
-    right: 0; }
-    .short-somecar .tabnav li {
-      font-size: 1.28571em;
-      font-weight: 700;
-      display: inline-block;
-      border-top: 4px solid transparent; }
-      .short-somecar .tabnav li a {
-        display: block;
-        padding-top: 5px;
-        padding-bottom: 5px; }
-      .short-somecar .tabnav li:not(:first-child) {
-        margin-left: 20px; }
-      .short-somecar .tabnav li.active {
-        border-color: #bb162b; }
   .short-somecar .btn-content {
     -webkit-box-align: center;
     -webkit-align-items: center;
@@ -9537,6 +9537,13 @@ figcaption {
     font-weight: 600;
     color: black; }
 
+@media (max-width: 991px) {
+  .all-nav {
+    padding-top: 20px; }
+    .all-nav li {
+      margin-top: 15px;
+      margin-bottom: 15px; } }
+
 .all-items h3 {
   font-weight: 900; }
 
@@ -9668,6 +9675,10 @@ figcaption {
     .carbuild-content .main-img img {
       z-index: 1;
       position: relative; }
+    @media (max-width: 991px) {
+      .carbuild-content .main-img {
+        min-height: 300px;
+        height: 350px; } }
   .carbuild-content .link-content {
     margin-top: 60px;
     color: white;
@@ -9687,8 +9698,7 @@ figcaption {
       padding-bottom: 10px;
       border-top: 4px solid transparent; }
   .carbuild-content .carbuild-footer {
-    color: white;
-    display: none; }
+    color: white; }
     .carbuild-content .carbuild-footer .container, .carbuild-content .carbuild-footer .vi .vi-container, .vi .carbuild-content .carbuild-footer .vi-container, .carbuild-content .carbuild-footer .vi .vi-content, .vi .carbuild-content .carbuild-footer .vi-content, .carbuild-content .carbuild-footer .bnr-carousel .container-arrows, .bnr-carousel .carbuild-content .carbuild-footer .container-arrows, .carbuild-content .carbuild-footer .bnr-carousel .flickity-page-dots, .bnr-carousel .carbuild-content .carbuild-footer .flickity-page-dots, .carbuild-content .carbuild-footer .fancybox-caption {
       position: relative; }
     .carbuild-content .carbuild-footer .wrapper-footer {
@@ -9697,6 +9707,16 @@ figcaption {
       padding-bottom: 30px;
       position: absolute;
       bottom: 0; }
+    @media (max-width: 991px) {
+      .carbuild-content .carbuild-footer .wrapper-footer {
+        position: relative;
+        background-color: #1f1f1f;
+        width: auto; }
+        .carbuild-content .carbuild-footer .wrapper-footer .color-select .list {
+          -webkit-box-pack: center;
+          -webkit-justify-content: center;
+          -ms-flex-pack: center;
+          justify-content: center; } }
   @media (min-width: 992px) {
     .carbuild-content .btn-last {
       margin-top: 30px;
@@ -9733,6 +9753,17 @@ figcaption {
   .carbuild-pos .entry-header {
     padding-top: 30px;
     padding-bottom: 30px; }
+  @media (max-width: 991px) {
+    .carbuild-pos .btn-close {
+      top: auto;
+      left: auto;
+      right: auto;
+      position: relative;
+      display: inline-block;
+      margin-top: 20px; }
+    .carbuild-pos .entry-header {
+      padding-top: 10px;
+      padding-bottom: 10px; } }
 
 .btn-close {
   position: absolute;
@@ -9783,7 +9814,17 @@ figcaption {
       .carbuild-pos-tabs .tabnav ul li:before {
         height: 4px;
         background-color: transparent;
-        pointer-events: none; }
+        pointer-events: none;
+        left: 0;
+        top: 0; }
+        @media (max-width: 991px) {
+          .carbuild-pos-tabs .tabnav ul li:before {
+            height: 100%;
+            margin-left: -15px;
+            width: 100%;
+            width: -webkit-calc(100% + 30px);
+            width: calc(100% + 30px);
+            opacity: 0.3; } }
       .carbuild-pos-tabs .tabnav ul li.active {
         opacity: 1; }
         .carbuild-pos-tabs .tabnav ul li.active:before {
@@ -9795,11 +9836,19 @@ figcaption {
     padding-top: 40px;
     padding-bottom: 40px;
     background-color: white; }
+  @media (max-width: 991px) {
+    .carbuild-pos-tabs .tabnav ul {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column; } }
 
 .addpacks .item {
   padding-top: 20px;
   padding-bottom: 20px;
-  border-top: 1px solid #c8c8c8; }
+  border-top: 1px solid #c8c8c8;
+  text-align: left; }
   .addpacks .item:last-child {
     border-bottom: 1px solid #c8c8c8; }
 
@@ -9867,6 +9916,9 @@ figcaption {
       -webkit-border-radius: 2px;
       border-radius: 2px;
       background-color: #666666; }
+    @media (max-width: 991px) {
+      .carbuild-summary .btn-close {
+        left: 15px; } }
   .carbuild-summary .wrapper {
     background-color: #f2f2f2;
     padding: 20px;
@@ -9928,6 +9980,9 @@ figcaption {
       font-size: 1.07143em; }
     .carbuild-summary .price-content .col-md-6:nth-child(2) {
       text-align: right; }
+  @media (max-width: 991px) {
+    .carbuild-summary {
+      width: 100%; } }
 
 .summary-table td {
   font-weight: 800; }
@@ -9942,6 +9997,115 @@ figcaption {
     width: 100%; }
   .summary-header, .link-onlinechat, .btn-opacity {
     display: none !important; } }
+
+.dealer .left-bar {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  display: none;
+  min-width: 33.33333%; }
+
+.dealer .contacts-map {
+  width: 100%; }
+
+.dealer .map-container {
+  height: 600px; }
+  @media (max-width: 991px) {
+    .dealer .map-container {
+      height: 350px; } }
+
+.dealer .wrapper-bar {
+  overflow-y: auto;
+  max-height: 80vh;
+  height: 550px; }
+  @media (max-width: 991px) {
+    .dealer .wrapper-bar {
+      height: auto; } }
+
+.dealer.open .left-bar {
+  display: block; }
+
+.dealer-wrapper {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex; }
+  @media (max-width: 991px) {
+    .dealer-wrapper {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: reverse;
+      -webkit-flex-direction: column-reverse;
+      -ms-flex-direction: column-reverse;
+      flex-direction: column-reverse; } }
+
+.dealer-items figure {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #c8c8c8; }
+  .dealer-items figure:not(.active) {
+    display: none; }
+  .dealer-items figure.active {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex; }
+
+.dealer-items .icon-content {
+  min-width: 40px; }
+  .dealer-items .icon-content img {
+    width: 30px;
+    margin-top: 5px; }
+
+.dealer-items .address {
+  color: #666666; }
+
+.dealer-items .desc-content {
+  width: 100%;
+  padding-left: 15px;
+  padding-right: 15px; }
+
+.gallery {
+  background-color: #1f1f1f;
+  color: white; }
+
+.gallery-img-items {
+  position: relative;
+  margin-left: -20px;
+  margin-right: -20px; }
+  .gallery-img-items figure {
+    position: relative;
+    display: inline-block;
+    width: 60%;
+    height: 560px;
+    padding-left: 20px;
+    padding-right: 20px;
+    float: left; }
+    .gallery-img-items figure:nth-child(2), .gallery-img-items figure:nth-child(3) {
+      width: 40%;
+      height: 260px;
+      float: left; }
+    .gallery-img-items figure:nth-child(3) {
+      margin-top: 40px; }
+    .gallery-img-items figure:nth-child(6) {
+      width: 40%;
+      height: 260px;
+      margin-top: 40px; }
+    .gallery-img-items figure:nth-child(7) {
+      margin-top: 40px;
+      float: right; }
+    .gallery-img-items figure:nth-child(8) {
+      margin-top: 40px;
+      height: 260px;
+      width: 40%; }
+    .gallery-img-items figure:nth-child(5n+4), .gallery-img-items figure:nth-child(5n+5) {
+      width: 50%;
+      height: 420px;
+      margin-top: 40px; }
+  .gallery-img-items .img, .gallery-img-items .img-content {
+    height: 100%; }
+  .gallery-img-items .img {
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-position: center; }
 
 /* 
 		_footer.scss
@@ -11930,7 +12094,7 @@ html .p-0 {
   .box-lg-12 {
     width: 120%; } }
 
-.flex-content, .flex-adaptive, .short-somecar .btn-content, .flex-def {
+.flex-content, .flex-adaptive, .short-somecar .btn-content, .dealer-items figure, .flex-def {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -11952,7 +12116,7 @@ html .p-0 {
   position: relative; }
 
 @media (max-width: 991px) {
-  .flex-adaptive, .short-somecar .btn-content, .flex-def {
+  .flex-adaptive, .short-somecar .btn-content, .dealer-items figure, .flex-def {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -webkit-flex-direction: column;
