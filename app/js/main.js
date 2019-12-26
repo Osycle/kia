@@ -575,6 +575,11 @@
 			var arrattr = $(this).attr("removeclass").trim().split(":");
 			$(arrattr[0]).removeClass(arrattr[1]);
 		})
+		$(document).on("click", "[toggleclass]", function(){
+			var arrattr = $(this).attr("toggleclass").trim().split(":");
+			$(arrattr[0]).toggleClass(arrattr[1]);
+		})
+
 		$(document).on("click", ".print-summary", function(){
 			print();
 		})
