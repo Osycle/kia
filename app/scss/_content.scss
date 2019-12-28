@@ -231,7 +231,6 @@ figcaption{
 .bnr-carousel{
 	$slider-height: 900px;
 	position: relative;
-	background-image: url('../img/bg/bg-bnr.jpg');
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center center;
@@ -659,6 +658,7 @@ figcaption{
 .short-advancar{
 	.flex-wrapper{
 		display: flex;
+		height: 680px;
 		@media (max-width: 991px){
 			flex-direction: column;
 			.item{
@@ -706,8 +706,13 @@ figcaption{
 		justify-content: flex-end;
 	}
 }
+.advancar-modal{
+	min-width: 835px;
+	background-color: white;
+	height: 400px;
+}
 .btn-ar{
-	display: flex;
+	display: flex !important;
 	align-items: center;
 	margin-top: 20px;
 	margin-bottom: 20px;

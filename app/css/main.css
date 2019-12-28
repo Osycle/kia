@@ -8959,7 +8959,6 @@ figcaption {
 
 .bnr-carousel {
   position: relative;
-  background-image: url("../img/bg/bg-bnr.jpg");
   -webkit-background-size: cover;
   background-size: cover;
   background-repeat: no-repeat;
@@ -9352,7 +9351,8 @@ figcaption {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
-  display: flex; }
+  display: flex;
+  height: 680px; }
   @media (max-width: 991px) {
     .short-advancar .flex-wrapper {
       -webkit-box-orient: vertical;
@@ -9400,11 +9400,16 @@ figcaption {
   -ms-flex-pack: end;
   justify-content: flex-end; }
 
+.advancar-modal {
+  min-width: 835px;
+  background-color: white;
+  height: 400px; }
+
 .btn-ar {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  display: -webkit-box !important;
+  display: -webkit-flex !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
   -webkit-box-align: center;
   -webkit-align-items: center;
   -ms-flex-align: center;
