@@ -82,15 +82,15 @@
 		}
 	}
 	&:after{
-		font-size: 44px;
+		font-size: 30px;
 		border-radius: 0;
 		background-color: transparent;
-		color: white;
+		color: #333;
 		//transform: scale(2);
 	}
 	&:hover{
 		&:after{
-			color: white;
+			color: #333;
 			background-color: transparent;
 		}
 	}
@@ -608,8 +608,8 @@ div.owl-nav{
 .owl-btn{
 	background-color: $color-1;
 	//background-image: $gradient-2;
-	width: 80px;
-	height: 80px;
+	width: 65px;
+	height: 65px;
 	z-index: 2;
 	display: inline-block;
 	display: flex;

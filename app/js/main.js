@@ -63,6 +63,50 @@
 			navText : owlBtn,
 			margin: 30
 		});
+		$(".news-article-items.owl-carousel").owlCarousel({
+			nav: true,
+			//items: 3,
+			dots: false,
+			dotsEach: true,
+			autoplay: false,
+			touchDrag: checkSm(),
+			responsive:{
+				0:{items:1},
+				991:{items:1}
+			},
+			navText : owlBtn,
+			margin: 30
+		});
+		$(".about-history-items.owl-carousel").owlCarousel({
+			nav: true,
+			//items: 3,
+			dots: false,
+			dotsEach: true,
+			autoplay: false,
+			touchDrag: checkSm(),
+			responsive:{
+				0:{items:1},
+				991:{items:4}
+			},
+			navText : owlBtn,
+			margin: 30
+		});
+		$(".about-best-items.owl-carousel").owlCarousel({
+			nav: true,
+			//items: 3,
+			dots: false,
+			dotsEach: true,
+			autoplay: false,
+			touchDrag: checkSm(),
+			responsive:{
+				0:{items:1},
+				991:{items:4}
+			},
+			navText : owlBtn,
+			margin: 30
+		});
+		
+
 		var spoCarousel = $(".short-projects-items.owl-carousel").owlCarousel({
 			nav: true,
 			//items: 3,
