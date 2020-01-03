@@ -711,7 +711,7 @@ figcaption{
 		//justify-content: flex-end;
 	}
 }
-.advancar-modal{
+.modal-def{
 	background-color: white;
 	min-height: 400px;
 	padding: 15px 15px;
@@ -719,6 +719,9 @@ figcaption{
 		padding: 30px 35px;
 		width: 65%;
 	}
+}
+.advancar-modal{
+	@extend .modal-def;
 	.modal-body{
 		overflow-y: auto;
 		height: 75vh;
@@ -744,6 +747,23 @@ figcaption{
 			@media (max-width: 991px){
 				margin-top: 10px;
 			}
+		}
+	}
+}
+.detail-modal{
+	h3{
+		border-bottom: 2px solid black;
+		padding-bottom: 15px;
+	}
+	@media (min-width: 992px){
+		padding: 30px 60px;
+		width: 60%;
+	}
+	.text-item{
+		p{
+			font-size: em(12);
+			line-height: 150%;
+			color: $color-gray-4;
 		}
 	}
 }
@@ -2180,3 +2200,126 @@ main{
 		}
 	}
 }
+
+
+//offers
+.border-color-1{
+	border-top: 4px solid #01a59a;
+	color: #01a59a;
+}
+.border-color-2{
+	border-top: 4px solid #f59000;
+	color: #f59000;
+}
+.border-color-3{
+	border-top: 4px solid #5892af;
+	color: #5892af;
+}
+.border-color-4{
+	border-top: 4px solid $color-1;
+	color: $color-1;
+}
+.offers{
+	.left-bar{
+		padding-left: 3%;
+		padding-right: 3%;
+	}
+	.entry-content{
+		padding-left: 3%;
+		padding-right: 3%;
+		background-color: $color-gray-2;
+	}
+	.filter-info{
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+	.collapse-item{
+		margin-top: 20px;
+		margin-bottom: 20px;
+		[data-toggle="collapse"]{
+			width: 100%;
+			display: flex;
+			justify-content: space-between;
+			i{
+				font-weight: 900;
+			}
+			&[aria-expanded="true"]{
+				i{
+					transform: rotate(180deg);
+				}
+			}
+		}
+	}
+	.cap-content{
+		font-size: em(18);
+	}
+	.filter-items{
+		figure{
+			background-color: white;
+		}
+		.desc-content{
+			padding-left: 8%;
+			padding-right: 8%;
+			padding-bottom: 30px;
+			width: 100%;
+		}
+		.img-content{
+			margin-top: 15px;
+			margin-bottom: 15px;
+			text-align: center;
+		}
+		.price{
+			font-size: em(24);
+			font-weight: 900;
+			margin-top: 15px;
+			margin-bottom: 15px;
+		}
+		h4{
+			text-align: center;
+			small{
+				font-weight: inherit;
+			}
+		}
+		p{
+			color: $color-gray-4;
+			b{
+				color: black;
+			}
+		}
+	}
+	.cap-text{
+		text-align: center;
+		padding: 10px 15px;
+	}
+	.form-content{
+		label{
+			text-align: left;
+			margin-top: 5px;
+			margin-bottom: 5px;
+		}
+	}
+}
+
+.offers-add-items{
+	figure{
+		background-color: white;
+	}
+	.img-content{
+		padding-right: 8%;
+		padding-left: 8%;
+	}
+	.desc-content{
+		padding-left: 8%;
+		padding-right: 8%;
+		padding-bottom: 30px;
+		width: 100%;
+	}
+	p{
+		color: $color-gray-4;
+		b{
+			color: black;
+		}
+	}
+}
+

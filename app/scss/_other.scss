@@ -450,7 +450,7 @@ html{
 
 .select2-container--default{
 	.select2-selection--single{
-		border-radius: 5px !important;
+		border-radius: 0 !important;
 		border: 1px solid $color-gray-3;
 		background-color: transparent;
 		height: 40px;		
@@ -464,8 +464,8 @@ html{
 			color: black;
 		}
 		.select2-selection__arrow {
-			background-color: $color-1;
-			border-radius: 5px;
+			background-color: transparent;
+			border-radius: 0;
 			width: 40px;
 			b{
 				border-color: black transparent transparent transparent;
