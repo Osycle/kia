@@ -7975,10 +7975,12 @@ input[type="radio"]:checked ~ .radio-style-1, input[type="radio"]:checked ~ .rad
 .radio-style-1, .radio-style-2 {
   width: 20px;
   height: 20px;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
   display: inline-block;
   background-color: transparent;
   position: relative;
-  border: 2px solid #bb162b; }
+  border: 2px solid #eeeeee; }
   .radio-style-1:hover, .radio-style-2:hover {
     cursor: pointer; }
 
@@ -10818,6 +10820,137 @@ main {
   color: #666666; }
   .offers-add-items p b {
     color: black; }
+
+.ctp {
+  background-color: #eeeeee; }
+  .ctp .left-bar {
+    padding: 60px 5%;
+    background-color: #eeeeee; }
+    .ctp .left-bar .form-content .select2-container--default .select2-selection--single .select2-selection__rendered {
+      line-height: 60px;
+      padding-left: 20px;
+      padding-right: 20px; }
+    .ctp .left-bar .form-content .select2-container--default .select2-selection--single {
+      height: 60px; }
+  .ctp .entry-content {
+    background-color: white;
+    min-height: 100vh; }
+  @media (max-width: 991px) {
+    .ctp .left-bar, .ctp .entry-content {
+      padding-left: 30px;
+      padding-right: 30px; } }
+  .ctp .sdealers label {
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: 1px solid black;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    height: 60px;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center; }
+  .ctp .sdealers .checkbox-style-1 {
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px; }
+    .ctp .sdealers .checkbox-style-1:before {
+      -webkit-border-radius: 50%;
+      border-radius: 50%; }
+  .ctp .sdealers input:checked ~ .checkbox-style-1:before {
+    border: none; }
+  .ctp .form-content p {
+    text-align: left; }
+  .ctp .input-content {
+    text-align: left; }
+  .ctp .text-label {
+    color: gray; }
+    @media (max-width: 991px) {
+      .ctp .text-label {
+        color: black; } }
+  .ctp .form-control {
+    background-color: white;
+    color: black; }
+    .ctp .form-control::-moz-placeholder {
+      color: #666666;
+      opacity: 1; }
+    .ctp .form-control:-ms-input-placeholder {
+      color: #666666; }
+    .ctp .form-control::-webkit-input-placeholder {
+      color: #666666; }
+    .ctp .form-control::-ms-expand {
+      border: 0;
+      background-color: transparent; }
+    .ctp .form-control:focus {
+      border-color: black; }
+  .ctp input.form-control {
+    border: none;
+    border-bottom: 1px solid #c8c8c8;
+    height: 50px;
+    padding-left: 0; }
+  .ctp p b {
+    color: black; }
+
+h3.border-top {
+  border-top: 3px solid black;
+  padding-top: 10px;
+  padding-bottom: 10px; }
+
+.ctp-colors-img {
+  position: relative;
+  height: 205px; }
+  .ctp-colors-img figure {
+    width: 100%;
+    top: 0;
+    text-align: center;
+    left: 0;
+    position: absolute; }
+  .ctp-colors-img .img-wrapper {
+    margin: auto; }
+    .ctp-colors-img .img-wrapper .img, .ctp-colors-img .img-wrapper .text-color {
+      opacity: 0;
+      pointer-events: none; }
+  .ctp-colors-img .img {
+    height: 170px;
+    -webkit-background-size: contain;
+    background-size: contain; }
+  .ctp-colors-img .text-color {
+    margin-top: 10px;
+    margin-bottom: 10px; }
+  .ctp-colors-img input {
+    display: none; }
+    .ctp-colors-img input:checked ~ .img-wrapper .img, .ctp-colors-img input:checked ~ .img-wrapper .text-color {
+      opacity: 1;
+      pointer-events: auto; }
+
+.ctp-color-items {
+  text-align: center; }
+  .ctp-color-items li {
+    padding-left: 2px;
+    padding-right: 2px; }
+  .ctp-color-items label {
+    width: 20px; }
+  .ctp-color-items .list {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center; }
 
 /* 
 		_footer.scss

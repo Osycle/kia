@@ -1247,11 +1247,12 @@ input[type="radio"]:checked{
 .radio-style-1{
 	width: 20px;
 	height: 20px;
+	border-radius: 50%;
 	display: inline-block;
 	//transition: all 0.05s ease;
 	background-color: transparent;
 	position: relative;
-	border: 2px solid $color-1;
+	border: 2px solid $color-gray-2;
 	&:hover{
 		cursor: pointer;
 	}

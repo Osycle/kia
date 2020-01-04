@@ -2323,3 +2323,149 @@ main{
 	}
 }
 
+
+
+.ctp{
+	background-color: $color-gray-2;
+	.left-bar{
+		padding: 60px 5%;
+		background-color: $color-gray-2;
+		.form-content{
+			.select2-container--default .select2-selection--single .select2-selection__rendered{
+				line-height: 60px;
+				padding-left: 20px;
+				padding-right: 20px;
+			}
+			.select2-container--default .select2-selection--single{
+				height: 60px;
+			}
+		}
+	}
+	.entry-content{
+		background-color: white;
+		min-height: 100vh;
+	}
+	.left-bar, .entry-content{
+		@media (max-width: 991px) {
+			padding-left: 30px;
+			padding-right: 30px;
+		}
+	}
+	.sdealers{
+		label{
+			padding: 10px;
+			margin-top: 10px;
+			margin-bottom: 10px;
+			border: 1px solid black;
+			display: flex;
+			height: 60px;
+			justify-content: space-between;
+			align-items: center;
+		}
+		.checkbox-style-1{
+			border-radius: 50%;
+			width: 30px;
+			height: 30px;
+
+			&:before{
+				border-radius: 50%;
+			}
+		}
+		input:checked ~ .checkbox-style-1:before{
+			border: none;
+		}
+	}
+	.form-content{
+		p{
+			text-align: left;
+		}
+	}
+	.input-content{
+		text-align: left;
+	}
+	.text-label{
+		color: gray;
+		@media (max-width: 991px){
+			color: black;
+		}
+	}
+	.form-control{
+		background-color: white;
+		color: black;
+		@include placeholder-color($color-gray-4);
+		&:focus{
+			border-color: black;
+		}
+
+	}
+	input.form-control{
+		border: none;
+		border-bottom: 1px solid $color-gray-3;
+		height: 50px;
+		padding-left: 0;
+	}
+	p{
+		b{
+			color: black;
+		}
+	}
+}
+h3{
+	&.border-top{
+		border-top: 3px solid black;
+		padding-top: 10px;
+		padding-bottom: 10px;
+	}
+}
+.ctp-colors-img{
+	position: relative;
+
+	height: 205px;
+	figure{
+		width: 100%;
+		top: 0;
+		text-align: center;
+		left: 0;
+		position: absolute;
+	}
+	.img-wrapper{
+		margin: auto;
+		.img, .text-color{
+			opacity: 0;
+			pointer-events: none;
+		}
+	}
+	.img{
+		height: 170px;
+		background-size: contain;
+	}
+	.text-color{
+		margin-top: 10px;
+		margin-bottom: 10px;
+	}
+
+	input{
+		display: none;
+		&:checked ~ .img-wrapper{
+			.img, .text-color{
+				opacity: 1;
+				pointer-events: auto;
+			}
+		}
+	}
+}
+.ctp-color-items{
+	text-align: center;
+	li{
+		padding-left: 2px;
+		padding-right: 2px;
+	}
+	label{
+		width: 20px;
+	}
+	.list{
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+}
